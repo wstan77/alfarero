@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  scope :api, :as=>:api do
+    scope :v1, :as=>:v1 do
+      resources :admins, :controller=>"api/v1/admins"
+    end
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

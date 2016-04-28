@@ -1,2 +1,6 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div ng-show="loading"> Cargando... </div>
+<div ng-show="!loading && admins.length <= 0"> No se encontraron los resultados </div>
+
+<ul>
+	<li ng-repeat="admin in admins">{{admin.names}} {{ admin.lastnames}}</li>
+</ul>
