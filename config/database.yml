@@ -20,4 +20,4 @@ production:
   <<: *default
   database: cda_production
   username: postgres
-  password: developer
+  password: T9gmk3I4FR2SbvxNEDWEUkZ91B
