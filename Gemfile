@@ -49,6 +49,6 @@ group :production do
 	# HEROKU GEMS
   gem 'rails_12factor'
   gem "newrelic_rpm"
-  gem 'unicorn'
+  gem 'puma'
 end
 
