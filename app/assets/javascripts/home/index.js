@@ -1,5 +1,5 @@
 angular.module("CdaApp", []).service('myService', function () { }).controller("Index", function($scope, $http){
-	$scope.posts=[];  
+	$scope.admins=[];  
 	$scope.loading=true;
 	$http.get("api/v1/admins")
 	.success(function(data){
