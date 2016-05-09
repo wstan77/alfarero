@@ -12,5 +12,5 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts
 Rails.application.config.assets.precompile += %w(
 												home.js 
 												angular/angular.min.js 
-												home/index.js 
+												home/index.js  
 												)

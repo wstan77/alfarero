@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks 
 //= require angular/angular.min 
+//= require home
