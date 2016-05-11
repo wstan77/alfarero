@@ -7,11 +7,11 @@
             </ol>
             <div class="carousel-inner"> 
                 <% i = 0 %>
-                <% Advertisement.all.each do |a| %>
+                <% Advertisement.order("id asc").each do |a| %>
                     <div class="item <%='active' if i==0%>" style="background-image: url(<%=a.background_img%>)">
                         <div class="container">
                             <div class="row slide-margin">
-                               <% if a.text_position==1%>
+                               <% if a.text_position=='left' %>
                                     <div class="col-sm-6 hidden-xs animation animated-item-4">
                                         <div class="slider-img">
                                             <img src="<%=a.main_img%>" class="img-responsive">
