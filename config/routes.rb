@@ -1,4 +1,5 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+
   scope :api, :as=>:api do
     scope :v1, :as=>:v1 do
       resources :admins, :controller=>"api/v1/admins"
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  get "admin" => "admin/home#index", as: :admin_root
+   
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

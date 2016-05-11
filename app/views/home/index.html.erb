@@ -5,68 +5,49 @@
                 <li data-target="#main-slider" data-slide-to="1"></li>
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner"> 
+                <% i = 0 %>
+                <% Advertisement.all.each do |a| %>
+                    <div class="item <%='active' if i==0%>" style="background-image: url(<%=a.background_img%>)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                               <% if a.text_position==1%>
+                                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                        <div class="slider-img">
+                                            <img src="<%=a.main_img%>" class="img-responsive">
+                                        </div>
+                                    </div>
 
-                <div class="item active" style="background-image: url(http://shapebootstrap.net/demo/html/corlate/images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="http://shapebootstrap.net/demo/html/corlate/images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(http://shapebootstrap.net/demo/html/corlate/images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="http://shapebootstrap.net/demo/html/corlate/images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(http://shapebootstrap.net/demo/html/corlate/images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="http://shapebootstrap.net/demo/html/corlate/images/slider/img3.png" class="img-responsive">
-                                </div>
+                                     <div class="col-sm-6">
+                                        <div class="carousel-content">
+                                            <h1 class="animation animated-item-1"><%=a.title%></h1>
+                                            <h2 class="animation animated-item-2"><%=a.description%></h2>
+                                            <% unless a.url_info.blank? %>
+                                                <a class="btn-slide animation animated-item-3" href="<%= a.url_info %>">Read More</a>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                <% else %> 
+                                     <div class="col-sm-6">
+                                        <div class="carousel-content">
+                                            <h1 class="animation animated-item-1"><%=a.title%></h1>
+                                            <h2 class="animation animated-item-2"><%=a.description%></h2>
+                                            <% unless a.url_info.blank? %>
+                                            <a class="btn-slide animation animated-item-3" href="<%= a.url_info %>">Read More</a>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                        <div class="slider-img">
+                                            <img src="<%=a.main_img%>" class="img-responsive">
+                                        </div>
+                                    </div>
+                                <% end %>
                             </div>
                         </div>
-                    </div>
-                </div><!--/.item-->
+                    </div><!--/.item-->
+                    <% i+=1 %>
+                <% end %>
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
