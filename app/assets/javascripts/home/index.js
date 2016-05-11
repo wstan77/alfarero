@@ -10,4 +10,4 @@ angular.module("CdaApp", []).service('myService', function () { }).controller("I
 	.error(function(err){ 
 		$scope.loading=false;
 	});
-});
+}); 

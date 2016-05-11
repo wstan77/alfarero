@@ -12,5 +12,13 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts
 Rails.application.config.assets.precompile += %w(
 												home.js 
 												angular/angular.min.js 
-												home/index.js  
+												home/index.js
+												bootstrap.js
+												plugin/isotope.js
+												plugin/main.js
+												plugin/main.css
+												plugin/prettyPhoto.js
+												plugin/prettyPhoto.css
+												plugin/animate.css
+												plugin/wow.js 
 												)

@@ -11,7 +11,5 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks 
-//= require angular/angular.min 
-//= require home
+//= require jquery_ujs 
+//= require home 
