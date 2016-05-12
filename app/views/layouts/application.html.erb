@@ -17,7 +17,7 @@
 	<%= render partial: "/partials/header"%> 
   	<%= yield %> 
   	<%= render partial: "/partials/footer"%>
-  	<%= javascript_include_tag "#{params[:controller]}/#{params[:action]}" if ::Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>
+  	<%#= javascript_include_tag "#{params[:controller]}/#{params[:action]}" if ::Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>
 	<%= javascript_include_tag 'application'%> 
 	<%= javascript_include_tag 'bootstrap'%> 
 	<%= javascript_include_tag 'plugin/prettyPhoto'%>
