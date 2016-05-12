@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511202654) do
+ActiveRecord::Schema.define(version: 20160512180122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,4 +38,19 @@ ActiveRecord::Schema.define(version: 20160511202654) do
     t.datetime "updated_at",                    null: false
   end
 
+  create_table "blog_entries", force: :cascade do |t|
+    t.integer  "admin_id"
+    t.string   "title"
+    t.string   "intro"
+    t.text     "content"
+    t.string   "previus_img"
+    t.boolean  "is_deleted",  default: false
+    t.integer  "count_view",  default: 0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "blog_entries", ["admin_id"], name: "index_blog_entries_on_admin_id", using: :btree
+
+  add_foreign_key "blog_entries", "admins"
 end

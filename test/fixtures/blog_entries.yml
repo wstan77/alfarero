@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_id: 
+  title: MyString
+  intro: MyString
+  content: MyText
+  previus_img: MyString
+  is_deleted: false
+  count_view: 1
+
+two:
+  admin_id: 
+  title: MyString
+  intro: MyString
+  content: MyText
+  previus_img: MyString
+  is_deleted: false
+  count_view: 1
