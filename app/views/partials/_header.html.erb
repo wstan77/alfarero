@@ -38,8 +38,8 @@
 			
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li> 
-                    <li class="dropdown">
+                    <li class="<%='active' if @section=='home'%>"><a href="/">Home</a></li> 
+                    <li class="dropdown <%='active' if @section=='------------'%>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quienes somos <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Historia</a></li>
@@ -47,8 +47,8 @@
                             <li><a href="#">Ministerios</a></li> 
                         </ul>
                     </li>
-                    <li><a href="services.html">Galería</a></li>  
-                    <li class="dropdown">
+                    <li class="<%='active' if @section=='---------------'%>"><a href="services.html">Galería</a></li>  
+                    <li class="dropdown <%='active' if @section=='miniteries'%>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ministerios <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Blog Single</a></li>
@@ -57,7 +57,7 @@
                             <li><a href="#">Shortcodes</a></li>
                         </ul>
                     </li>
-                    <li><a href="blog">Blog</a></li> 
+                    <li class="<%='active' if @section=='blog'%>"><a href="blog">Blog</a></li> 
                     <li><a href="#">Contáctenos</a></li>                        
                 </ul>
             </div>

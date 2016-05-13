@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   layout "application"
-  def index
+  def index 
+  	@section = 'home'
   	@advertisements = Advertisement.order("id asc")
   	@capsule = Capsule.last
   end
