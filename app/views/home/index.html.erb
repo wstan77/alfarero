@@ -7,7 +7,7 @@
             </ol>
             <div class="carousel-inner"> 
                 <% i = 0 %>
-                <% Advertisement.order("id asc").each do |a| %>
+                <% @advertisements.each do |a| %>
                     <div class="item <%='active' if i==0%>" style="background-image: url(<%=a.background_img%>)">
                         <div class="container">
                             <div class="row slide-margin">
@@ -58,25 +58,49 @@
         </a>
     </section><!--/#main-slider-->
 
-
+    <% unless @capsule.nil? %>
     <div class="purchase">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 animated fadeInLeft">
-            <div class="wow fadeInDown">
-                <div class="get-started center wow fadeInDown animated" style="margin-top: 30px">
-                    <h2>¿Sabías qué?</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    <div class="request">
-                        <h4><a href="#">Capsula del dia de hoy</a></h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 animated fadeInRight">
+                    <div class="row clearfix">
+                        <div class="col-md-12">
+                            <br>
+                            <div class="team">
+                        <div data-wow-delay="300ms" data-wow-duration="1000ms" class="single-profile-top wow fadeInDown animated" style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInDown;">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <br>
+                                    <a href="#"><img alt="" src="http://shapebootstrap.net/demo/html/corlate/images/man1.jpg" class="media-object"></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Saul Barraza</h4>
+                                    <h5>Pastor General</h5> 
+                                    <p>"<i>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</i>"</p>
+                                </div>
+                            </div><!--/.media -->
+                            
+                        </div>
+                    </div>
+                        </div>
                     </div>
                 </div>
-            </div> 
-      </div>   
+                <div class="col-md-8 animated fadeInLeft">
+                    <div class="wow fadeInDown">
+                        <div class="get-started center wow fadeInDown animated" style="margin-top: 30px; padding: 0px 10px 30px 10px">
+                            <h2><%= @capsule.title %></h2>
+                            <p class="lead"><small><%=@capsule.content%></small></p>
+                            <%= link_to "Fuente de referencia", @capsule.link_ref, target: "blank" %>
+                            <div class="request">
+                                <h4><a href="#">Capsula del dia de hoy</a></h4>
+                            </div>
+                        </div>
+                    </div> 
+                </div>   
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
+    <% end %>
 
 
  <section id="feature" >
@@ -120,7 +144,7 @@
                     </div>  
                 </div> 
             </div>   
-            <div class="col-md-3">
+            <div class="col-md-3 hidden-sm">
                 <div class="fb-page" data-href="https://www.facebook.com/Ministerio-Internacional-Casa-del-Alfarero-599050463514889/?fref=ts" data-tabs="timeline" data-height="320" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/Ministerio-Internacional-Casa-del-Alfarero-599050463514889/?fref=ts">Facebook</a></blockquote></div></div> 
             </div>   
         </div><!--/.row-->    
