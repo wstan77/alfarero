@@ -5,11 +5,11 @@ default: &default
   reconnect: false
   host: localhost
   database: cda_prod
-  username: postgres
-  password: developer
 
 development:
-  <<: *default
+  <<: *default 
+  username: postgres
+  password: developer
 
 test:
   <<: *default
