@@ -15,7 +15,6 @@ test:
   <<: *default
   database: cda_test 
 
-#
 production:
   <<: *default
   database: alfarero_production
