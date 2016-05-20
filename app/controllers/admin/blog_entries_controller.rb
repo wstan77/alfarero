@@ -1,6 +1,6 @@
 class Admin::BlogEntriesController < ApplicationController
   before_action :set_admin_blog_entry, only: [:show, :edit, :update, :destroy]
-
+  layout "admin"
   # GET /admin/blog_entries
   # GET /admin/blog_entries.json
   def index

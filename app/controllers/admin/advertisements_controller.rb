@@ -1,6 +1,6 @@
 class Admin::AdvertisementsController < ApplicationController
   before_action :set_admin_advertisement, only: [:show, :edit, :update, :destroy]
-
+  layout "admin"
   # GET /admin/advertisements
   # GET /admin/advertisements.json
   def index

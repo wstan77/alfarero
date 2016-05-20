@@ -21,4 +21,6 @@ Rails.application.config.assets.precompile += %w(
 												plugin/prettyPhoto.css
 												plugin/animate.css
 												plugin/wow.js 
+												admin.css 
+												admin.js 
 												)

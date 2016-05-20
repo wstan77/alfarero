@@ -1,6 +1,6 @@
 class Admin::CapsulesController < ApplicationController
   before_action :set_admin_capsule, only: [:show, :edit, :update, :destroy]
-
+  layout "admin"
   # GET /admin/capsules
   # GET /admin/capsules.json
   def index
