@@ -19,4 +19,5 @@ class Advertisement < ActiveRecord::Base
 	enum text_position: [ :right, :left ] 
 	mount_uploader :background_img, AdvertisementImgUploader
 	mount_uploader :main_img, AdvertisementImgUploader
+	
 end

@@ -1,7 +1,7 @@
 <div class="form-inputs">
 	<%= f.input :title%>
 	<%= f.input :description%>
-	<%= f.input :text_position%>
+	<%= f.input :text_position, collection: [['Texto a la Izquierda', 'left'], ['Texto a la Derecha', 'right']], prompt: "Seleccione una opción ", selected: @admin_advertisement.text_position %>
 	<%= f.input :url_info%>
 	<%= f.input :background_img%>
 	<%= f.input :main_img%> 
