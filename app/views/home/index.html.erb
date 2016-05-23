@@ -8,13 +8,13 @@
             <div class="carousel-inner"> 
                 <% i = 0 %>
                 <% @advertisements.each do |a| %>
-                    <div class="item <%='active' if i==0%>" style="background-image: url(<%=a.background_img%>)">
+                    <div class="item <%='active' if i==0%>" style="background-image: url(<%=a.background_img.url%>)">
                         <div class="container">
                             <div class="row slide-margin">
                                <% if a.text_position=='left' %>
                                     <div class="col-sm-6 hidden-xs animation animated-item-4">
                                         <div class="slider-img">
-                                            <img src="<%=a.main_img%>" class="img-responsive">
+                                            <img src="<%=a.main_img.url%>" class="img-responsive">
                                         </div>
                                     </div>
 
@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="col-sm-6 hidden-xs animation animated-item-4">
                                         <div class="slider-img">
-                                            <img src="<%=a.main_img%>" class="img-responsive">
+                                            <img src="<%=a.main_img.url%>" class="img-responsive">
                                         </div>
                                     </div>
                                 <% end %>

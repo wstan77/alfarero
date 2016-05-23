@@ -1,10 +1,15 @@
 class Admin::AdvertisementsController < ApplicationController
   before_action :set_admin_advertisement, only: [:show, :edit, :update, :destroy]
+  before_action :set_title
   layout "admin"
   # GET /admin/advertisements
   # GET /admin/advertisements.json
   def index
-    @admin_advertisements = Admin::Advertisement.all
+    @admin_advertisements = Advertisement.all 
+    if @admin_advertisements.size == 0
+      flash[:notice] = "No hay anuncios"
+    end
+    @page_subtitle = "Listado de anuncios"
   end
 
   # GET /admin/advertisements/1
@@ -14,7 +19,7 @@ class Admin::AdvertisementsController < ApplicationController
 
   # GET /admin/advertisements/new
   def new
-    @admin_advertisement = Admin::Advertisement.new
+    @admin_advertisement = Advertisement.new
   end
 
   # GET /admin/advertisements/1/edit
@@ -24,11 +29,11 @@ class Admin::AdvertisementsController < ApplicationController
   # POST /admin/advertisements
   # POST /admin/advertisements.json
   def create
-    @admin_advertisement = Admin::Advertisement.new(admin_advertisement_params)
+    @admin_advertisement = Advertisement.new(admin_advertisement_params)
 
     respond_to do |format|
       if @admin_advertisement.save
-        format.html { redirect_to @admin_advertisement, notice: 'Advertisement was successfully created.' }
+        format.html { redirect_to admin_advertisements_path, notice: 'Advertisement was successfully created.' }
         format.json { render :show, status: :created, location: @admin_advertisement }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class Admin::AdvertisementsController < ApplicationController
   def update
     respond_to do |format|
       if @admin_advertisement.update(admin_advertisement_params)
-        format.html { redirect_to @admin_advertisement, notice: 'Advertisement was successfully updated.' }
+        format.html { redirect_to admin_advertisements_path, notice: 'Advertisement was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_advertisement }
       else
         format.html { render :edit }
@@ -64,11 +69,15 @@ class Admin::AdvertisementsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_advertisement
-      @admin_advertisement = Admin::Advertisement.find(params[:id])
+      @admin_advertisement = Advertisement.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    def set_title
+      @page_title = "Anuncios en el Sitio"
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through. 
     def admin_advertisement_params
-      params.fetch(:admin_advertisement, {})
+      params.require(:advertisement).permit! 
     end
 end

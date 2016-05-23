@@ -1,25 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Admin Advertisements</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @admin_advertisements.each do |admin_advertisement| %>
-      <tr>
-        <td><%= link_to 'Show', admin_advertisement %></td>
-        <td><%= link_to 'Edit', edit_admin_advertisement_path(admin_advertisement) %></td>
-        <td><%= link_to 'Destroy', admin_advertisement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="pull-right">
+  <%= link_to '<i class="fa fa-plus"></i> Nuevo Anuncio'.html_safe, new_admin_advertisement_path, class: 'btn btn-app' %>
+</div> 
+<% if @admin_advertisements.size == 0 %>
+  <hr>
+  <br>
+  <div class="alert alert-info text-center"><strong><i class="fa fa-info"></i> No hay anuncios</strong></div>
+<% else %> 
+    <% @admin_advertisements.each do |a| %>
+      <%= image_tag(a.background_img.url, class: 'img-responsive') %>
+      <%= link_to 'Show', admin_advertisement_path(a) %>
+      <%= link_to 'Edit', edit_admin_advertisement_path(a) %>
+      <%= link_to 'Destroy', admin_advertisement_path(a), method: :delete, data: { confirm: 'Are you sure?' } %>
+      
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Advertisement', new_admin_advertisement_path %>
+<% end %>

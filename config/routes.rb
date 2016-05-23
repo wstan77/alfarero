@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   scope :admin, :as=>:admin do
     resources :admins, :controller=>"admin/admins"
+    resources :advertisements, :controller=>"admin/advertisements"
   end
    
 

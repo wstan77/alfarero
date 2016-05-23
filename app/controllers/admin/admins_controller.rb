@@ -6,7 +6,7 @@ class Admin::AdminsController < ApplicationController
   # GET /admin/admins
   # GET /admin/admins.json
   def index
-    @admin_admins = Admin.active
+    @admin_admins = Admin.active 
     if @admin_admins.size == 0
       flash[:notice] = "No hay administradores"
     end
