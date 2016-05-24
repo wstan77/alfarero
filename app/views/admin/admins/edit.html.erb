@@ -1,0 +1,7 @@
+<%= simple_form_for(@admin_admin, url: admin_admin_path, method: :patch) do |f| %>
+	<%= render partial: 'form', locals: {:f => f}%>
+ 
+ 	<div class="form-actions">
+    	<%= f.submit "Actualizar registro", class: "btn btn-primary" %> | <%= link_to '<< Cancelar', admin_admins_path, class: "btn btn-default" %>
+  	</div> 
+<% end %>

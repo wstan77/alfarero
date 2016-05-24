@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   root 'home#index'
   get "admin" => "admin/home#index", as: :admin_root
   get "blog" => "blog#index", as: :blog_root
+
+  scope :admin, :as=>:admin do
+    resources :admins, :controller=>"admin/admins"
+    resources :advertisements, :controller=>"admin/advertisements"
+  end
    
 
   # Example of regular route:

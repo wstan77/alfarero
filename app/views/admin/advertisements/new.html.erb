@@ -1,0 +1,12 @@
+ 
+<%= simple_form_for(@admin_advertisement, url: admin_advertisements_path, method: :post, html: {multipart: true}) do |f| %>
+	<%= render partial: 'form', locals: {:f => f}%>
+ 
+ 	<div class="form-actions">
+    	<%= f.submit "Guardar registro", class: "btn btn-primary" %> | <%= link_to '<< Cancelar', admin_advertisements_path, class: "btn btn-default" %>
+  	</div> 
+<% end %>
+
+
+
+ 

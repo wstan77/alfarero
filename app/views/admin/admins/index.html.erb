@@ -1,0 +1,40 @@
+<div class="pull-right">
+    <%= link_to '<i class="fa fa-plus"></i> Nuevo Admin'.html_safe, new_admin_admin_path, class: 'btn btn-app' %>
+</div>
+<% if @admin_admins.size == 0 %>
+  <hr>
+  <br>
+  <div class="alert alert-info text-center"><strong><i class="fa fa-info"></i> No hay adminstradores</strong></div>
+<% else %>
+<div class="box-tools">
+  <div style="width: 150px;" class="input-group input-group-sm">
+    <input type="text" placeholder="Search" class="form-control pull-right" name="table_search">
+
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+</div>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Nombre completo</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_admins.each do |admin| %>
+      <tr>
+        <td><%= admin.full_name %></td>
+        <td><%= admin.email %></td>
+        <td> 
+          <%= link_to 'Editar'.html_safe, edit_admin_admin_path(admin), class: "btn btn-warning btn-sm" %>
+          <%= link_to 'Eliminar'.html_safe, admin_admin_path(admin), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+

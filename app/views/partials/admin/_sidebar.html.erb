@@ -1,0 +1,42 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar"> 
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu">
+    <li class="header">MENU ADMINISTRATIVO</li>
+    <li class="<%='active' if params[:controller]=='admin/home' %>">
+      <a href="/admin">
+        <i class="fa fa-home"></i> <span>Home</span>
+      </a> 
+    </li>
+    <li class="<%='active' if params[:controller]=='admin/admins' %>">
+      <a href="/admin/admins">
+        <i class="fa fa-users"></i> <span>Administradores</span>
+      </a> 
+    </li>
+    <li class="<%='active' if params[:controller]=='admin/advertisements' %>">
+      <a href="/admin/advertisements">
+        <i class="fa fa-bullhorn"></i> <span>Anuncios</span>
+      </a>
+    </li>
+    <li class="<%='active' if params[:controller]=='admin/blog_entries' %>">
+      <a href="/admin/blog_entries">
+        <i class="fa fa-list"></i> <span>Blog</span>
+      </a> 
+    </li>
+    <li class="<%='active' if params[:controller]=='admin/capsules' %>">
+      <a href="/admin/capsules">
+        <i class="fa fa-check"></i> <span>Capsulas de consejería</span>
+      </a> 
+    </li>
+    <li class="<%='active' if params[:controller]=='admin/media' %>">
+      <a href="/admin/">
+        <i class="fa fa-play"></i> <span>Multimedia</span>
+      </a> 
+    </li>   
+    <li class="header">LABELS</li>
+    <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+    <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+  </ul>
+</section>
+<!-- /.sidebar --> 

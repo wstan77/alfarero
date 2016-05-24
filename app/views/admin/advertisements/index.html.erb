@@ -1,0 +1,45 @@
+<div class="">
+  <%= link_to '<i class="fa fa-plus"></i> Nuevo Anuncio'.html_safe, new_admin_advertisement_path, class: 'btn btn-app btn-block' %>
+</div> 
+<% if @admin_advertisements.size == 0 %>
+  <hr>
+  <br>
+  <div class="alert alert-info text-center"><strong><i class="fa fa-info"></i> No hay anuncios</strong></div>
+<% else %>  
+<div class="row"> 
+  <% @admin_advertisements.each do |a| %>  
+        <div class="col-md-4"> 
+          <div class="box box-widget widget-user"> 
+            <div style="background: url('<%= a.background_img %>') center center;" class="widget-user-header bg-black">
+              <h3 class="widget-user-username"><%= a.title%></h3>
+              <h5 class="widget-user-desc"><%= a.description.truncate(25)%></h5>
+            </div>
+            <div class="widget-user-image">
+              <img alt="User Avatar" src="<%= a.background_img %>" class="img-circle">
+            </div>
+            <div class="box-footer">
+              <div class="row">
+                <div class="col-sm-4 border-right">
+                  <div class="description-block"> 
+                    <span class="description-text"><%#= link_to 'Show', admin_advertisement_path(a) %></span>
+                  </div> 
+                </div> 
+                <div class="col-sm-4 border-right">
+                  <div class="description-block"> 
+                    <span class="description-text"><%= link_to 'Editar', edit_admin_advertisement_path(a), class: 'btn btn-warning' %></span>
+                  </div> 
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                  <div class="description-block"> 
+                    <span class="description-text"><%= link_to 'Eliminar', admin_advertisement_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></span>
+                  </div> 
+                </div> 
+              </div> 
+            </div>
+          </div> 
+        </div>   
+    <% end %>
+    </div>
+
+<% end %>

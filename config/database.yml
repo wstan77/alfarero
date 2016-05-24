@@ -3,14 +3,19 @@ default: &default
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  host: localhost
-  database: cda_prod
+  host: localhost 
 
 development:
-  <<: *default 
-  username: rails
-  password: XqvKcvJbEW
+  <<: *default
+  database: alfarero_development
+  username: postgres
+  password: developer
 
+test:
+  <<: *default
+  database: alfarero_test 
+
+#
 production:
   <<: *default
   database: alfarero_production
