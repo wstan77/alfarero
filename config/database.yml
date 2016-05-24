@@ -19,5 +19,5 @@ test:
 production:
   <<: *default
   database: alfarero_production
-  username: rails
-  password: XqvKcvJbEW
+  username: rails 
+  password: XqvKcvJbEW 
