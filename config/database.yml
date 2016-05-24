@@ -20,4 +20,4 @@ production:
   <<: *default
   database: alfarero_production
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  password: XqvKcvJbEW
