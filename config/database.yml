@@ -3,17 +3,17 @@ default: &default
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  host: localhost
-  database: cda_prod
+  host: localhost 
+
+development:
+  <<: *default
+  database: alfarero_development
   username: postgres
   password: developer
 
-development:
-  <<: *default 
-
 test:
   <<: *default
-  database: cda_test 
+  database: alfarero_test 
 
 #
 production:

@@ -5,5 +5,23 @@
 	<%= f.input :url_info%>
 	<%= f.input :background_img%>
 	<%= f.input :main_img%> 
+	<%= f.input :is_permanent%> 
+	<div class="row times" style="display:none">
+		<div class="col-md-4"><%= f.input :start_at, as: :string%> </div>
+		<div class="col-md-4"><%= f.input :end_at, as: :string%> </div>
+	</div>
+	
 </div>
- 
+  <%= content_for :javascripts do %>
+ <script>
+ $(document).on('ready', function(){
+ 	$("#advertisement_is_permanent").on('change', function(){
+ 		if($(this).is(':checked')){
+ 			$('div.times').slideUp('fast');
+ 		}else{ 
+ 			$('div.times').slideDown('fast');
+ 		}
+ 	})
+ })
+ </script>
+ <% end %>
