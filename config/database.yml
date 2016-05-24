@@ -8,12 +8,8 @@ default: &default
 
 development:
   <<: *default 
-  username: postgres
-  password: developer
-
-test:
-  <<: *default
-  database: cda_test 
+  username: rails
+  password: XqvKcvJbEW
 
 production:
   <<: *default
