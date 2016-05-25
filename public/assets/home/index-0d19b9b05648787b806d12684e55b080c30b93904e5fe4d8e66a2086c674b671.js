@@ -1,0 +1,1 @@
+angular.module("CdaApp",[]).service("myService",function(){}).controller("Index",function(t,e){t.admins=[],t.loading=!0,e.get("api/v1/admins").success(function(e){console.log(e),t.admins=e,t.loading=!1}).error(function(){t.loading=!1})});
