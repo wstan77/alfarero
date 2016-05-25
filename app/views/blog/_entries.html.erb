@@ -4,14 +4,16 @@
         <div class="col-xs-12 col-sm-2 text-center">
             <div class="entry-meta">
                 <span id="publish_date"><%= b.created_at.strftime('%d %B')%></span>
-                <span><i class="fa fa-user"></i> <a href="#"><%= b.admin.names.truncate(12)%></a></span>
+                <span><i class="fa fa-user"></i> <a href="#"><%= b.admin.names.truncate(12) unless b.admin.nil?%></a></span>
                 <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
                 <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
             </div>
         </div>
             
         <div class="col-xs-12 col-sm-10 blog-content">
-            <a href="#"><img width="100%" alt="" src="<%=b.previus_img%>" class="img-responsive img-blog"></a>
+            <a href="#">
+                <%= image_tag(b.previus_img.real, class: 'img-responsive img-blog') %>
+            </a>
             <h2><a href="blog-item.html"><%=b.title%></a></h2>
             <p class="well text-muted" style="padding: 10px"><small><%=b.intro%></small></p>
             <h3><%=b.content.truncate(265)%></h3>

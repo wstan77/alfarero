@@ -1,10 +1,15 @@
 class Admin::BlogEntriesController < ApplicationController
   before_action :set_admin_blog_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_title
   layout "admin"
   # GET /admin/blog_entries
   # GET /admin/blog_entries.json
   def index
-    @admin_blog_entries = Admin::BlogEntry.all
+    @blog_entries = BlogEntry.all
+    if @blog_entries.size == 0
+      flash[:notice] = "No hay entradas en el blog"
+    end
+    @page_subtitle = "Listado completo"
   end
 
   # GET /admin/blog_entries/1
@@ -14,7 +19,8 @@ class Admin::BlogEntriesController < ApplicationController
 
   # GET /admin/blog_entries/new
   def new
-    @admin_blog_entry = Admin::BlogEntry.new
+    @admin_blog_entry = BlogEntry.new
+    @page_subtitle = "Crear nueva entrada"
   end
 
   # GET /admin/blog_entries/1/edit
@@ -24,11 +30,11 @@ class Admin::BlogEntriesController < ApplicationController
   # POST /admin/blog_entries
   # POST /admin/blog_entries.json
   def create
-    @admin_blog_entry = Admin::BlogEntry.new(admin_blog_entry_params)
-
+    @admin_blog_entry = BlogEntry.new(admin_blog_entry_params)
+    @page_subtitle = "Crear nueva entrada"
     respond_to do |format|
       if @admin_blog_entry.save
-        format.html { redirect_to @admin_blog_entry, notice: 'Blog entry was successfully created.' }
+        format.html { redirect_to admin_blog_entries_path, notice: 'Blog entry was successfully created.' }
         format.json { render :show, status: :created, location: @admin_blog_entry }
       else
         format.html { render :new }
@@ -42,7 +48,7 @@ class Admin::BlogEntriesController < ApplicationController
   def update
     respond_to do |format|
       if @admin_blog_entry.update(admin_blog_entry_params)
-        format.html { redirect_to @admin_blog_entry, notice: 'Blog entry was successfully updated.' }
+        format.html { redirect_to admin_blog_entries_path, notice: 'Blog entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_blog_entry }
       else
         format.html { render :edit }
@@ -64,11 +70,15 @@ class Admin::BlogEntriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_blog_entry
-      @admin_blog_entry = Admin::BlogEntry.find(params[:id])
+      @admin_blog_entry = BlogEntry.find(params[:id])
+    end
+
+    def set_title
+      @page_title = "Administrador del Blog"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_blog_entry_params
-      params.fetch(:admin_blog_entry, {})
+      params.require(:blog_entry).permit!
     end
 end
