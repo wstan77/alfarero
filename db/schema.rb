@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526161739) do
+ActiveRecord::Schema.define(version: 20160526161859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,10 @@ ActiveRecord::Schema.define(version: 20160526161739) do
     t.boolean  "is_permanent",   default: true
     t.datetime "start_at"
     t.datetime "end_at"
+    t.integer  "admin_id"
   end
+
+  add_index "advertisements", ["admin_id"], name: "index_advertisements_on_admin_id", using: :btree
 
   create_table "blog_categories", force: :cascade do |t|
     t.string   "title"
@@ -77,6 +80,7 @@ ActiveRecord::Schema.define(version: 20160526161739) do
 
   add_index "capsules", ["admin_id"], name: "index_capsules_on_admin_id", using: :btree
 
+  add_foreign_key "advertisements", "admins"
   add_foreign_key "blog_categories", "admins"
   add_foreign_key "blog_entries", "admins"
   add_foreign_key "capsules", "admins"

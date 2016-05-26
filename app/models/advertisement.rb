@@ -25,4 +25,9 @@ end
 #  is_permanent   :boolean          default(TRUE)
 #  start_at       :datetime
 #  end_at         :datetime
+#  admin_id       :integer
+#
+# Indexes
+#
+#  index_advertisements_on_admin_id  (admin_id)
 #
