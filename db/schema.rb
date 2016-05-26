@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523233530) do
+ActiveRecord::Schema.define(version: 20160526161739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 20160523233530) do
     t.datetime "end_at"
   end
 
+  create_table "blog_categories", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "admin_id"
+    t.integer  "order_int",          default: 1
+    t.integer  "blog_entries_count", default: 0
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "blog_categories", ["admin_id"], name: "index_blog_categories_on_admin_id", using: :btree
+
   create_table "blog_entries", force: :cascade do |t|
     t.integer  "admin_id"
     t.string   "title"
@@ -61,7 +72,12 @@ ActiveRecord::Schema.define(version: 20160523233530) do
     t.string   "link_ref"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "admin_id"
   end
 
+  add_index "capsules", ["admin_id"], name: "index_capsules_on_admin_id", using: :btree
+
+  add_foreign_key "blog_categories", "admins"
   add_foreign_key "blog_entries", "admins"
+  add_foreign_key "capsules", "admins"
 end

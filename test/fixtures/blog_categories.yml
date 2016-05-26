@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  admin_id: 
+  order_int: 1
+  blog_entries_count: 1
+
+two:
+  title: MyString
+  admin_id: 
+  order_int: 1
+  blog_entries_count: 1

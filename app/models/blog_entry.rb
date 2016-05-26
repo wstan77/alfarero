@@ -1,3 +1,10 @@
+class BlogEntry < ActiveRecord::Base
+  belongs_to :admin
+  validates :title, :intro, :content, presence: true
+  mount_uploader :previus_img, BlogPreviusImgUploader
+
+end
+
 # == Schema Information
 #
 # Table name: blog_entries
@@ -17,10 +24,3 @@
 #
 #  index_blog_entries_on_admin_id  (admin_id)
 #
-
-class BlogEntry < ActiveRecord::Base
-  belongs_to :admin
-  validates :title, :intro, :content, presence: true
-  mount_uploader :previus_img, BlogPreviusImgUploader
-
-end

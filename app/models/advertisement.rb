@@ -1,3 +1,13 @@
+class Advertisement < ActiveRecord::Base
+	belongs_to :admin
+	validate :background_img, on: :create
+	validates :title, :description, presence: true 
+	enum text_position: [ :right, :left ] 
+	mount_uploader :background_img, AdvertisementImgUploader
+	mount_uploader :main_img, AdvertisementImgUploader
+	
+end
+
 # == Schema Information
 #
 # Table name: advertisements
@@ -16,12 +26,3 @@
 #  start_at       :datetime
 #  end_at         :datetime
 #
-
-class Advertisement < ActiveRecord::Base
-	validate :background_img, on: :create
-	validates :title, :description, presence: true 
-	enum text_position: [ :right, :left ] 
-	mount_uploader :background_img, AdvertisementImgUploader
-	mount_uploader :main_img, AdvertisementImgUploader
-	
-end
