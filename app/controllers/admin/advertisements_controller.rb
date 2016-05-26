@@ -30,7 +30,7 @@ class Admin::AdvertisementsController < ApplicationController
   # POST /admin/advertisements.json
   def create
     @admin_advertisement = Advertisement.new(admin_advertisement_params)
-
+    @admin_advertisement.admin_id = current_admin.id
     respond_to do |format|
       if @admin_advertisement.save
         format.html { redirect_to admin_advertisements_path, notice: 'Advertisement was successfully created.' }

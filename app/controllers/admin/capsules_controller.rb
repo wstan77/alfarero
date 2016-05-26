@@ -25,7 +25,7 @@ class Admin::CapsulesController < ApplicationController
   # POST /admin/capsules.json
   def create
     @admin_capsule = Admin::Capsule.new(admin_capsule_params)
-
+    @admin_capsule.admin_id = current_admin.id
     respond_to do |format|
       if @admin_capsule.save
         format.html { redirect_to @admin_capsule, notice: 'Capsule was successfully created.' }

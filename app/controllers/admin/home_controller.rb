@@ -1,7 +1,7 @@
-class Admin::HomeController < Devise::SessionsController
+class Admin::HomeController < ApplicationController
   layout "admin" 
-  #before_action :authenticate_admin!
+  before_action :authenticate_admin!
 
-  def index
-  end
+  def index 
+  end 
 end

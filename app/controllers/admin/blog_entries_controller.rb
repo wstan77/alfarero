@@ -32,6 +32,7 @@ class Admin::BlogEntriesController < ApplicationController
   def create
     @admin_blog_entry = BlogEntry.new(admin_blog_entry_params)
     @page_subtitle = "Crear nueva entrada"
+    @admin_blog_entry.admin_id = current_admin.id
     respond_to do |format|
       if @admin_blog_entry.save
         format.html { redirect_to admin_blog_entries_path, notice: 'Blog entry was successfully created.' }
