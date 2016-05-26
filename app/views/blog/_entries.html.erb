@@ -14,9 +14,8 @@
             <a href="#">
                 <%= image_tag(b.previus_img.real, class: 'img-responsive img-blog') %>
             </a>
-            <h2><a href="blog-item.html"><%=b.title%></a></h2>
-            <p class="well text-muted" style="padding: 10px"><small><%=b.intro%></small></p>
-            <h3><%=b.content.truncate(265)%></h3>
+            <h2><a href="blog-item.html"><%=b.title%></a></h2> 
+            <h3><%=b.intro%></h3>
             <a href="/<%=b.id%>" class="btn btn-primary readmore">Leer más <i class="fa fa-angle-right"></i></a>
         </div>
     </div>    

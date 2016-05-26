@@ -8,4 +8,15 @@
 
 
 
- 
+<%= content_for :stylesheets do %>
+ 	<%= stylesheet_link_tag 'plugin/wysihtml5' %> 
+<% end %>
+
+<%= content_for :javascripts do %>
+	<%= javascript_include_tag 'https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js'%>
+	<script>
+		jQuery(function($) { 
+			CKEDITOR.replace('blog_entry_content'); 
+		});
+	</script>
+<% end %>

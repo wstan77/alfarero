@@ -22,5 +22,7 @@ Rails.application.config.assets.precompile += %w(
 												plugin/animate.css
 												plugin/wow.js 
 												admin.css 
-												admin.js 
+												admin.js  
+												plugin/wysihtml5.css 
+												plugin/wysihtml5.js 
 												)

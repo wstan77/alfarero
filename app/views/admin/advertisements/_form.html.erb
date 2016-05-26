@@ -1,14 +1,14 @@
 <div class="form-inputs">
-	<%= f.input :title%>
-	<%= f.input :description%>
-	<%= f.input :text_position, collection: [['Texto a la Izquierda', 'left'], ['Texto a la Derecha', 'right']], prompt: "Seleccione una opción ", selected: @admin_advertisement.text_position %>
-	<%= f.input :url_info%>
-	<%= f.input :background_img%>
-	<%= f.input :main_img%> 
-	<%= f.input :is_permanent%> 
+	<%= f.input :title, label: 'Título'%>
+	<%= f.input :description, label: 'Descripción'%>
+	<%= f.input :text_position, collection: [['Texto a la Izquierda', 'left'], ['Texto a la Derecha', 'right']], prompt: "Seleccione una opción ", selected: @admin_advertisement.text_position, label: 'Posición del texto' %>
+	<%= f.input :url_info, label: 'Url'%>
+	<%= f.input :background_img, label: 'Imagen de fondo: (1350px X 415 px)' %>
+	<%= f.input :main_img, label: 'Imagen principal: (400 X 300 px), sin fondo' %> 
+	<%= f.input :is_permanent, label: 'Anuncio permanente' %> 
 	<div class="row times" style="display:none">
-		<div class="col-md-4"><%= f.input :start_at, as: :string%> </div>
-		<div class="col-md-4"><%= f.input :end_at, as: :string%> </div>
+		<div class="col-md-4"><%= f.input :start_at, as: :string, label: 'Fecha de inicio' %> </div>
+		<div class="col-md-4"><%= f.input :end_at, as: :string, label: 'Fecha de fin' %> </div>
 	</div>
 	
 </div>
