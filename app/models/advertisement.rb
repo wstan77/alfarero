@@ -4,8 +4,7 @@ class Advertisement < ActiveRecord::Base
 	validates :title, :description, presence: true 
 	enum text_position: [ :right, :left ] 
 	mount_uploader :background_img, AdvertisementImgUploader
-	mount_uploader :main_img, AdvertisementImgUploader
-	
+	mount_uploader :main_img, AdvertisementImgUploader 
 end
 
 # == Schema Information

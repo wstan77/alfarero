@@ -1,5 +1,6 @@
 class BlogCategory < ActiveRecord::Base
   belongs_to :admin
+  has_many :blog_categories
   validates :title, :order_int, presence: true 
 end
 
