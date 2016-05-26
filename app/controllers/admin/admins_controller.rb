@@ -1,6 +1,7 @@
 class Admin::AdminsController < ApplicationController
   before_action :set_admin_admin, only: [:show, :edit, :update, :destroy]
   before_action :set_title
+  before_action :authenticate_admin!
 
   layout "admin"
   # GET /admin/admins

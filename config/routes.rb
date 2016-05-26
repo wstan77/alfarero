@@ -1,5 +1,10 @@
 Rails.application.routes.draw do 
 
+  devise_for :admin, :controllers => {  :sessions=>"admin/sessions"},
+    :path_names => { :sign_in => 'login'}
+  #devise_for :admins, :skip=>[:registration], :path=>"admins", :controllers => {  :sessions=>"admins/sessions"},
+  #           :path_names => { :sign_in => 'login'}
+  
   scope :api, :as=>:api do
     scope :v1, :as=>:v1 do
       resources :admins, :controller=>"api/v1/admins"
