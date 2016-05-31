@@ -19,11 +19,23 @@ Rails.application.routes.draw do
   root 'home#index'
   get "admin" => "admin/home#index", as: :admin_root
   get "blog" => "blog#index", as: :blog_root
-
+  get "blog/:category" => "blog#category"
+  
   scope :admin, :as=>:admin do
     resources :admins, :controller=>"admin/admins"
     resources :advertisements, :controller=>"admin/advertisements"
-    resources :blog_entries, :controller=>"admin/blog_entries"
+    resources :blog_entries, :controller=>"admin/blog_entries" do 
+      collection do 
+        get "categories"
+        get "new_category"
+        post "create_category"
+      end
+      member do 
+        get "edit_category"
+        patch "update_category"
+        delete "delete_category"
+      end
+    end
   end
    
 

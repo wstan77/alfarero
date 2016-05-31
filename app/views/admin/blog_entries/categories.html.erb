@@ -1,0 +1,35 @@
+<div class="pull-right">
+<%= link_to "<i class='fa fa-arrow-left'></i> Retroceder".html_safe, admin_blog_entries_path, class: "btn btn-default" %>
+</div>
+<%= link_to "Crear categoría", new_category_admin_blog_entries_path, class: "btn btn-primary" %>
+<% if @categories.size == 0 %>
+  	<hr>
+  	<br>
+	<div class="alert alert-info text-center"><strong><i class="fa fa-info"></i> No hay categorías</strong></div>
+<% else %>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Nombre de la categoría</th>
+				<th># Posts</th>
+				<th>Creado por</th>
+				<th>Orden en sitio</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @categories.each do |c|%>
+			<tr>
+				<td><h4><%= c.title %></h4></td>
+				<td><p class="badge badge-blue"><%= c.blog_entries_count %></p></td>
+				<td><i class="fa fa-user"> <%= c.admin.full_name %></td>
+				<td class="text-center"> <%= c.order_int %></td>
+				<td>
+					<%= link_to "Editar", edit_category_admin_blog_entry_path(c), class: "btn btn-warning" %>
+					<%= link_to "Eliminar", delete_category_admin_blog_entry_path(c), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %> 
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+<% end %>

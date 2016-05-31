@@ -1,6 +1,6 @@
 class BlogEntry < ActiveRecord::Base
   belongs_to :admin
-  belongs_to :blog_category
+  belongs_to :blog_category, :counter_cache => true
   validates :title, :intro, :content,:blog_category_id, presence: true
   mount_uploader :previus_img, BlogPreviusImgUploader
 

@@ -12,6 +12,60 @@ class Admin::BlogEntriesController < ApplicationController
     @page_subtitle = "Listado completo"
   end
 
+  def categories
+    @categories = BlogCategory.all
+    if @categories.size == 0
+      flash[:notice] = "No hay categorias para el blog"
+    end
+    @page_subtitle = "Categorías para el blog"
+  end
+
+  def new_category
+    @category = BlogCategory.new
+    @page_subtitle = "Crear nueva categoría"
+  end
+
+  def create_category
+    @category = BlogCategory.new(categories_params)
+    @page_subtitle = "Crear nueva categoría"
+    @category.admin_id = current_admin.id
+    respond_to do |format|
+      if @category.save
+        format.html { redirect_to categories_admin_blog_entries_path, notice: 'Categoría creada con éxito.' }
+        #format.json { render :show, status: :created, location: @category }
+      else
+        format.html { render :new_category }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def edit_category
+    @category = BlogCategory.find(params[:id])
+  end
+
+  def update_category
+    @category = BlogCategory.find(params[:id])
+    respond_to do |format|
+      if @category.update(categories_params)
+        format.html { redirect_to categories_admin_blog_entries_path, notice: 'Categoría actualizada con éxito.' }
+        format.json { render :show, status: :ok, location: @category }
+      else
+        format.html { render :edit_category }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def delete_category
+    @category = BlogCategory.find(params[:id])
+    #@category.update_column("is_deleted", true)
+    respond_to do |format|
+      format.html { redirect_to categories_admin_blog_entries_path, notice: 'Categoría quitada.' }
+      format.json { head :no_content }
+    end
+  end
+
   # GET /admin/blog_entries/1
   # GET /admin/blog_entries/1.json
   def show
@@ -61,7 +115,7 @@ class Admin::BlogEntriesController < ApplicationController
   # DELETE /admin/blog_entries/1
   # DELETE /admin/blog_entries/1.json
   def destroy
-    @admin_blog_entry.destroy
+    #@admin_blog_entry.update_column("is_deleted", true)
     respond_to do |format|
       format.html { redirect_to admin_blog_entries_url, notice: 'Blog entry was successfully destroyed.' }
       format.json { head :no_content }
@@ -81,5 +135,9 @@ class Admin::BlogEntriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_blog_entry_params
       params.require(:blog_entry).permit!
+    end
+
+    def categories_params
+      params.require(:blog_category).permit!
     end
 end
