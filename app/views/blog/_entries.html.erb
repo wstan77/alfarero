@@ -6,7 +6,7 @@
                 <span id="publish_date"><%= b.created_at.strftime('%d %B')%></span>
                 <span><i class="fa fa-user"></i> <a href="#"><%= b.admin.names.truncate(12) unless b.admin.nil?%></a></span>
                 <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                <span><i class="fa fa-list"></i><a href="#">56 Likes</a></span>
             </div>
         </div>
             
@@ -14,9 +14,9 @@
             <a href="#">
                 <%= image_tag(b.previus_img.real, class: 'img-responsive img-blog') %>
             </a>
-            <h2><a href="blog-item.html"><%=b.title%></a></h2> 
+            <h2><a href="blog-item.html"><%=b.title%></a> <br><small><%= b.blog_category.title if b.blog_category%></small></h2> 
             <h3><%=b.intro%></h3>
-            <a href="/<%=b.id%>" class="btn btn-primary readmore">Leer más <i class="fa fa-angle-right"></i></a>
+            <%= link_to "Leer más <i class='fa fa-angle-right'></i>".html_safe, blog_show_path(b.blog_category, b), class: 'btn-primary readmore' %> 
         </div>
     </div>    
 </div><!--/.blog-item-->

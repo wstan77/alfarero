@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   root 'home#index'
   get "admin" => "admin/home#index", as: :admin_root
   get "blog" => "blog#index", as: :blog_root
-  get "blog/:category" => "blog#category"
-  
+  get "blog/:category" => "blog#category", as: :blog_category
+  get "blog/:category/:blog" => "blog#show", as: :blog_show
+
   scope :admin, :as=>:admin do
     resources :admins, :controller=>"admin/admins"
     resources :advertisements, :controller=>"admin/advertisements"

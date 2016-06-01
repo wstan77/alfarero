@@ -4,7 +4,7 @@
         <div class="col-sm-12">
             <ul class="blog_category">
                 <% @categories.each do |c| %>
-                    <li><a href="#"><%= c.title %> <span class="badge"><%= c.blog_entries_count%></span></a></li>
+                    <li><%= link_to "#{c.title} <span class='badge'>#{c.blog_entries_count}</span>".html_safe, blog_category_path(c)%></li> 
                 <% end %> 
             </ul>
         </div>
