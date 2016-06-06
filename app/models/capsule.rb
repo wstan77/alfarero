@@ -1,6 +1,6 @@
 class Capsule < ActiveRecord::Base
 	belongs_to :admin
-	validates :title, :intro, :content, presence: true
+	validates :title, :content, presence: true
 
 end
 

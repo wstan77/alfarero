@@ -1,25 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Admin Capsules</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+ 
+<div class="pull-right">
+    <%= link_to '<i class="fa fa-plus"></i> Nueva capsula'.html_safe, new_admin_capsule_path, class: 'btn btn-app' %> 
+</div>
+ 
     <% @admin_capsules.each do |admin_capsule| %>
-      <tr>
-        <td><%= link_to 'Show', admin_capsule %></td>
-        <td><%= link_to 'Edit', edit_admin_capsule_path(admin_capsule) %></td>
-        <td><%= link_to 'Destroy', admin_capsule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Capsule', new_admin_capsule_path %>
+      <div class="post">  
+          <h3><%= admin_capsule.title %></h3> 
+          <p class="text-muted">Publicado por: <strong><%= admin_capsule.admin.full_name %></strong></p> 
+        <p>
+          <%= admin_capsule.content %>
+        </p>
+        <ul class="list-inline">
+          <li>
+            <%= link_to "<i class='fa fa-edit margin-r-5'></i> Editar".html_safe, edit_admin_capsule_path(admin_capsule), class: "btn-xs text-sm btn-warning btn" %>
+          </li>
+          <li>
+            <%= link_to "<i class='fa fa-close'></i> Quitar".html_safe, admin_capsule_path(admin_capsule), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger btn  btn-xs  text-sm" %> 
+          </li> 
+        </ul> 
+      </div>
+ 
+    <% end %> 

@@ -1,10 +1,15 @@
 class Admin::CapsulesController < ApplicationController
   before_action :set_admin_capsule, only: [:show, :edit, :update, :destroy]
+  before_action :set_title
   layout "admin"
   # GET /admin/capsules
   # GET /admin/capsules.json
   def index
-    @admin_capsules = Admin::Capsule.all
+    @admin_capsules = Capsule.all
+    if @admin_capsules.size == 0
+      flash[:notice] = "No hay capsulas"
+    end
+    @page_subtitle = "Listado completo"
   end
 
   # GET /admin/capsules/1
@@ -14,7 +19,7 @@ class Admin::CapsulesController < ApplicationController
 
   # GET /admin/capsules/new
   def new
-    @admin_capsule = Admin::Capsule.new
+    @admin_capsule = Capsule.new
   end
 
   # GET /admin/capsules/1/edit
@@ -24,11 +29,11 @@ class Admin::CapsulesController < ApplicationController
   # POST /admin/capsules
   # POST /admin/capsules.json
   def create
-    @admin_capsule = Admin::Capsule.new(admin_capsule_params)
+    @admin_capsule = Capsule.new(admin_capsule_params)
     @admin_capsule.admin_id = current_admin.id
     respond_to do |format|
       if @admin_capsule.save
-        format.html { redirect_to @admin_capsule, notice: 'Capsule was successfully created.' }
+        format.html { redirect_to admin_capsules_path, notice: 'Capsule was successfully created.' }
         format.json { render :show, status: :created, location: @admin_capsule }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class Admin::CapsulesController < ApplicationController
   def update
     respond_to do |format|
       if @admin_capsule.update(admin_capsule_params)
-        format.html { redirect_to @admin_capsule, notice: 'Capsule was successfully updated.' }
+        format.html { redirect_to admin_capsules_path, notice: 'Capsule was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_capsule }
       else
         format.html { render :edit }
@@ -64,11 +69,15 @@ class Admin::CapsulesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_capsule
-      @admin_capsule = Admin::Capsule.find(params[:id])
+      @admin_capsule = Capsule.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_capsule_params
-      params.fetch(:admin_capsule, {})
+      params.require(:capsule).permit!
+    end
+
+    def set_title
+      @page_title = "Capsulas informativas"
     end
 end

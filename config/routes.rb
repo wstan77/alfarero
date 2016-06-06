@@ -37,6 +37,8 @@ Rails.application.routes.draw do
         delete "delete_category"
       end
     end
+    resources :capsules, :controller=>"admin/capsules" do 
+    end
   end
    
 

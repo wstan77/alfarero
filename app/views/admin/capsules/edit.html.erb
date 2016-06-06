@@ -1,6 +1,6 @@
-<h1>Editing Admin Capsule</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @admin_capsule %> |
-<%= link_to 'Back', admin_capsules_path %>
+<%= simple_form_for(@admin_capsule, url: admin_capsule_path, method: :patch) do |f| %>
+	<%= render partial: 'form', locals: {:f => f}%>
+	<div class="form-actions">
+    	<%= f.submit "Guardar registro", class: "btn btn-primary" %> | <%= link_to '<< Cancelar', admin_capsules_path, class: "btn btn-default" %>
+  	</div> 
+<% end %>
