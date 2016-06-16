@@ -27,6 +27,7 @@
   	<%= render partial: "/partials/footer"%>
   	<%= javascript_include_tag "#{params[:controller]}/#{params[:action]}" if ::Rails.application.assets.find_asset("#{params[:controller]}/#{params[:action]}.js") %>
 	<%= javascript_include_tag 'application'%> 
+  <%= yield :javascripts %> 
 	<%= javascript_include_tag 'bootstrap'%> 
 	<%= javascript_include_tag 'plugin/prettyPhoto'%>
 	<%= javascript_include_tag 'plugin/isotope'%>
