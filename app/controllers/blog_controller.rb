@@ -5,4 +5,9 @@ class BlogController < ApplicationController
   	@entries = BlogEntry.all
   	@categories = BlogCategory.all
   end
+
+  def show
+  	@blog = BlogEntry.find(params[:blog])
+  	@categories = BlogCategory.all
+  end
 end

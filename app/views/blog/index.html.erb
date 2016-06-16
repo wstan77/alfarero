@@ -1,90 +1,26 @@
 <section id="blog" class="container"> 
     <div class="blog">
-            <div class="row">
-                 <div class="col-md-8">
-                 <%= render partial: "entries"%>
-                 
-                    <ul class="pagination pagination-lg">
-                        <li><a href="#"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
-                    </ul><!--/.pagination-->
-                </div><!--/.col-md-8-->
+        <div class="row">
+            <div class="col-md-8">
+                <%= render partial: "entries"%> 
+            </div><!--/.col-md-8-->
 
-                <aside class="col-md-4">
-                    <div class="widget search">
-                        <form role="form">
-                                <input type="text" placeholder="Search Here" autocomplete="off" class="form-control search_box">
-                        </form>
-                    </div><!--/.search-->
-    				
-    				<div class="widget categories">
-                        <h3>Recent Comments</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="single_comments">
-                                    <img alt="" src="images/blog/avatar3.png">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img alt="" src="images/blog/avatar3.png">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img alt="" src="images/blog/avatar3.png">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>                     
-                    </div><!--/.recent comments-->
-                     
+            <aside class="col-md-4">
+                <div class="widget search">
+                    <form role="form">
+                            <input type="text" placeholder="Search Here" autocomplete="off" class="form-control search_box">
+                    </form>
+                </div><!--/.search-->
+				
+				<div class="widget categories">
+                    <%= render partial: "comments" %>                      
+                </div><!--/.recent comments--> 
 
-                    <%= render partial: "categories" %>
-    				
-    				<div class="widget archieve">
-                        <h3>Archieve</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <ul class="blog_archieve">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2013 <span class="pull-right">(97)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2013 <span class="pull-right">(32)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2013 <span class="pull-right">(19)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2013 <span class="pull-right">(08)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>                     
-                    </div><!--/.archieve-->
-    				
-                    <div class="widget tags">
-                        <h3>Tag Cloud</h3>
-                        <ul class="tag-cloud">
-                            <li><a href="#" class="btn btn-xs btn-primary">Apple</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Barcelona</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Office</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Ipod</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Stock</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Race</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">London</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Football</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Porche</a></li>
-                            <li><a href="#" class="btn btn-xs btn-primary">Gadgets</a></li>
-                        </ul>
-                    </div><!--/.tags--> 
-    			</aside>  
-            </div><!--/.row-->
-        </div>
+                <%= render partial: "categories" %> 
+                <div class="widget tags">
+                    <%= render partial: "tags" %> 
+                </div><!--/.tags--> 
+			</aside>  
+        </div><!--/.row-->
+    </div>
 </section>

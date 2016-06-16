@@ -1,0 +1,23 @@
+<form role="form" action="sendemail.php" method="post" name="contact-form" class="contact-form" id="main-contact-form">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>Name *</label>
+                <input type="text" required="required" class="form-control">
+            </div>                
+        </div>
+        <div class="col-sm-7">  
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" required="required" class="form-control">
+            </div>   
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Message *</label>
+        <textarea rows="8" class="form-control" required="required" id="message" name="message"></textarea>
+    </div>                        
+    <div class="form-group">
+        <button required="required" class="btn btn-primary btn-lg" type="submit">Submit Message</button>
+    </div>
+</form>  

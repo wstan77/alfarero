@@ -1,0 +1,91 @@
+<section class="container" id="blog">
+    <div class="center">
+        <h2>Blogs</h2>
+        <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+    </div>
+
+    <div class="blog">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog-item"> 
+                    <%= image_tag(@blog.previus_img.real, class: 'img-responsive img-blog') %>
+                        <div class="row">  
+                            <div class="col-xs-12 col-sm-2 text-center">
+                                <div class="entry-meta">
+                                    <span id="publish_date"><%= @blog.created_at.strftime('%d %B')%></span>
+                                    <span><i class="fa fa-user"></i> <a href="#"><%= @blog.admin.names.truncate(12) unless @blog.admin.nil?%></a></span>
+                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                    <span><i class="fa fa-list"></i><a href="#">56 Likes</a></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 blog-content">
+                                <h2><%= @blog.title %></h2>
+                                <div class="well well-xs"><%=@blog.intro %></div>
+                                <%=@blog.content.html_safe%>
+                                <div class="post-tags">
+                                    <strong>Tag:</strong> <a href="#">Cool</a> / <a href="#">Creative</a> / <a href="#">Dubttstep</a>
+                                </div>
+                                 <div class="pull-right post_reply text-center"> 
+                                    <ul>
+                                        <li><p>Comparte esto en tus redes sociales: &nbsp;&nbsp;</p> </li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--/.blog-item-->
+                     
+                    <h1 id="comments_title">5 Comments</h1>
+                    <div class="media comment_section">
+                        <div class="pull-left post_comments">
+                            <a href="#"><img alt="" class="img-circle" src="images/blog/girl.png"></a>
+                        </div>
+                        <div class="media-body post_reply_comments">
+                            <h3>Marsh</h3>
+                            <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p> 
+                        </div>
+                    </div> 
+                    <div class="media comment_section">
+                        <div class="pull-left post_comments">
+                            <a href="#"><img alt="" class="img-circle" src="images/blog/boy2.png"></a>
+                        </div>
+                        <div class="media-body post_reply_comments">
+                            <h3>Marsh</h3>
+                            <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p> 
+                        </div>
+                    </div>  
+
+
+                    <div id="contact-page clearfix">
+                        <div style="display: none" class="status alert alert-success"></div>
+                        <div class="message_heading">
+                            <h4>Deja tu comentario</h4>
+                            <p>Puedes participar dejando tu comentario acerca de este contenido.</p>
+                        </div>  
+                        <%= render partial: "form_comment"%>   
+                    </div><!--/#contact-page-->
+                </div><!--/.col-md-8-->
+
+            <aside class="col-md-4">
+                <div class="widget search">
+                    <form role="form">
+                            <input type="text" placeholder="Search Here" autocomplete="off" class="form-control search_box">
+                    </form>
+                </div><!--/.search-->
+				
+				<div class="widget categories">
+                    <%= render partial: "comments" %>                      
+                </div><!--/.recent comments--> 
+
+                <%= render partial: "categories" %> 
+                <div class="widget tags">
+                    <%= render partial: "tags" %> 
+                </div><!--/.tags-->   
+            </aside>      
+        </div><!--/.row--> 
+     </div><!--/.blog--> 
+</section>

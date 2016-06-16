@@ -14,7 +14,7 @@
             <a href="#">
                 <%= image_tag(b.previus_img.real, class: 'img-responsive img-blog') %>
             </a>
-            <h2><a href="blog-item.html"><%=b.title%></a> <br><small><%= b.blog_category.title if b.blog_category%></small></h2> 
+            <h2><%= link_to b.title, blog_show_path(b.blog_category, b) %> <br><small><%= b.blog_category.title if b.blog_category%></small></h2> 
             <h3><%=b.intro%></h3>
             <%= link_to "Leer más <i class='fa fa-angle-right'></i>".html_safe, blog_show_path(b.blog_category, b), class: 'btn-primary readmore' %> 
         </div>
