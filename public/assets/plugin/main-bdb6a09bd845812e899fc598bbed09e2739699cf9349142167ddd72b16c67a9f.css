@@ -1,0 +1,2892 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800";
+/*************************
+*******Typography******
+**************************/
+/* line 8, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color: #4e4e4e;
+  line-height: 22px;
+}
+
+/* line 15, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  color: #4e4e4e;
+}
+
+/* line 26, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+h1 {
+  font-size: 36px;
+  color: #fff;
+}
+
+/* line 31, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+h2 {
+  font-size: 20px;
+}
+
+/* line 35, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+h3 {
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* line 42, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+h4 {
+  font-size: 16px;
+}
+
+/* line 46, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+a {
+  color: #c52d2f;
+  -webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition: color 300ms, background-color 300ms;
+  transition: color 300ms, background-color 300ms;
+}
+
+/* line 54, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+a:hover, a:focus {
+  color: #d43133;
+}
+
+/* line 58, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+hr {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 64, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.btn-primary {
+  padding: 8px 20px;
+  background: #c52d2f;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+}
+
+/* line 74, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #c52d2f;
+  outline: none;
+  box-shadow: none;
+}
+
+/* line 81, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.btn-transparent {
+  border: 3px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+/* line 87, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.btn-transparent:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 91, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+a:hover,
+a:focus {
+  color: #111;
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 98, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.dropdown-menu {
+  margin-top: -1px;
+  min-width: 180px;
+}
+
+/* line 103, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.center h2 {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* line 109, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.media > .pull-left {
+  margin-right: 20px;
+}
+
+/* line 113, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.media > .pull-right {
+  margin-left: 20px;
+}
+
+/* line 117, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+body > section {
+  padding: 70px 0;
+}
+
+/* line 121, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.center {
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+/* line 126, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.scaleIn {
+  -webkit-animation-name: scaleIn;
+  animation-name: scaleIn;
+}
+
+/* line 131, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.lead {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* line 137, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.transparent-bg {
+  background-color: transparent !important;
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/*************************
+*******Header******
+**************************/
+/* line 177, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#header .search {
+  display: inline-block;
+}
+
+/* line 181, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar > .container .navbar-brand {
+  margin-left: 0;
+}
+
+/* line 185, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.top-bar {
+  padding: 10px 0;
+  background: #191919;
+  border-bottom: 1px solid #222;
+  line-height: 28px;
+}
+
+/* line 192, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.top-number {
+  color: #fff;
+}
+
+/* line 196, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.top-number p {
+  margin: 0;
+}
+
+/* line 200, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.social {
+  text-align: right;
+}
+
+/* line 204, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.social-share {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 211, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social-share li {
+  display: inline-block;
+}
+
+/* line 215, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social-share li a {
+  display: inline-block;
+  color: #fff;
+  background: #404040;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* line 226, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social-share li a:hover {
+  background: #c52d2f;
+  color: #fff;
+}
+
+/* line 231, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.search i {
+  color: #fff;
+}
+
+/* line 235, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+input.search-form {
+  background: transparent;
+  border: 0 none;
+  width: 60px;
+  padding: 0 10px;
+  color: #FFF;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+
+/* line 248, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+input.search-form::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* line 252, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+input.search-form:hover::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/* line 256, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+input.search-form:hover {
+  width: 180px;
+}
+
+/* line 260, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 265, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #151515;
+  padding: 15px 0;
+  padding-bottom: 0;
+}
+
+/* line 273, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-nav {
+  margin-top: 12px;
+}
+
+/* line 277, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-nav > li {
+  margin-left: 35px;
+  padding-bottom: 28px;
+}
+
+/* line 282, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav > li > a {
+  padding: 5px 12px;
+  margin: 0;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 24px;
+  display: inline-block;
+}
+
+/* line 291, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #c52d2f;
+  color: #fff;
+}
+
+/* line 296, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse {
+  border: none;
+}
+
+/* line 300, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-brand {
+  font-size: 36px;
+  line-height: 50px;
+  color: #fff;
+}
+
+/* line 306, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #c52d2f;
+  color: #fff;
+}
+
+/* line 316, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  border-top: 0;
+  border-radius: 0;
+  left: 0;
+}
+
+/* line 329, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu:before {
+  position: absolute;
+  top: 0;
+}
+
+/* line 334, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu > li > a {
+  padding: 8px 15px;
+  color: #fff;
+}
+
+/* line 339, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
+  background-color: #c52d2f;
+  color: #fff;
+}
+
+/* line 346, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 350, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-nav .dropdown-menu > li.divider {
+  background-color: transparent;
+}
+
+/* line 354, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-top: 0;
+  padding-bottom: 0;
+}
+
+/*************************
+*******Home Page******
+**************************/
+/* line 366, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider {
+  position: relative;
+}
+
+/* line 370, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 375, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .carousel-content {
+  margin-top: 150px;
+}
+
+/* line 379, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .slide-margin {
+  margin-top: 20px;
+}
+
+/* line 383, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel h2 {
+  color: #fff;
+}
+
+/* line 387, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .btn-slide {
+  padding: 8px 20px;
+  background: #c52d2f;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+/* line 396, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .slider-img {
+  text-align: right;
+  position: absolute;
+}
+
+/* line 402, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .item {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0 !important;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block !important;
+  height: 416px;
+  -webkit-transition: opacity ease-in-out 500ms;
+  -moz-transition: opacity ease-in-out 500ms;
+  -o-transition: opacity ease-in-out 500ms;
+  transition: opacity ease-in-out 500ms;
+}
+
+/* line 419, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .item:first-child {
+  top: auto;
+  position: relative;
+}
+
+/* line 424, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel .item.active {
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out 500ms;
+  -moz-transition: opacity ease-in-out 500ms;
+  -o-transition: opacity ease-in-out 500ms;
+  transition: opacity ease-in-out 500ms;
+  z-index: 1;
+}
+
+/* line 433, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .prev,
+#main-slider .next {
+  position: absolute;
+  top: 50%;
+  background-color: #c52d2f;
+  color: #fff;
+  display: inline-block;
+  margin-top: -25px;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* line 450, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .prev:hover,
+#main-slider .next:hover {
+  background-color: #000;
+}
+
+/* line 455, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .prev {
+  left: 10px;
+}
+
+/* line 459, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .next {
+  right: 10px;
+}
+
+/* line 463, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin: 0 15px 0 0;
+  position: relative;
+}
+
+/* line 471, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel-indicators li:after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background: transparent;
+  border: 1px solid #FFF;
+  left: -3px;
+  top: -3px;
+}
+
+/* line 483, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel-indicators .active {
+  width: 20px;
+  height: 20px;
+  background-color: #c52d2f;
+  margin: 0 15px 0 0;
+  border: 1px solid #c52d2f;
+  position: relative;
+}
+
+/* line 492, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .carousel-indicators .active:after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background: #c52d2f;
+  border: 1px solid #c52d2f;
+  left: -3px;
+  top: -3px;
+}
+
+/* line 504, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .active .animation.animated-item-1 {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  -moz-animation: fadeInUp 300ms linear 300ms both;
+  -o-animation: fadeInUp 300ms linear 300ms both;
+  -ms-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
+}
+
+/* line 512, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .active .animation.animated-item-2 {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  -moz-animation: fadeInUp 300ms linear 600ms both;
+  -o-animation: fadeInUp 300ms linear 600ms both;
+  -ms-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+}
+
+/* line 520, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .active .animation.animated-item-3 {
+  -webkit-animation: fadeInUp 300ms linear 900ms both;
+  -moz-animation: fadeInUp 300ms linear 900ms both;
+  -o-animation: fadeInUp 300ms linear 900ms both;
+  -ms-animation: fadeInUp 300ms linear 900ms both;
+  animation: fadeInUp 300ms linear 900ms both;
+}
+
+/* line 528, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#main-slider .active .animation.animated-item-4 {
+  -webkit-animation: fadeInUp 300ms linear 1200ms both;
+  -moz-animation: fadeInUp 300ms linear 1200ms both;
+  -o-animation: fadeInUp 300ms linear 1200ms both;
+  -ms-animation: fadeInUp 300ms linear 1200ms both;
+  animation: fadeInUp 300ms linear 1200ms both;
+}
+
+/* line 536, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#feature {
+  background: #f2f2f2;
+  padding-bottom: 40px;
+}
+
+/* line 541, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.features {
+  padding: 0;
+}
+
+/* line 545, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.feature-wrap {
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+/* line 550, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.feature-wrap h2 {
+  margin-top: 10px;
+}
+
+/* line 554, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.feature-wrap .pull-left {
+  margin-right: 25px;
+}
+
+/* line 558, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.feature-wrap i {
+  font-size: 48px;
+  height: 110px;
+  width: 110px;
+  margin: 3px;
+  border-radius: 100%;
+  line-height: 110px;
+  text-align: center;
+  background: #ffffff;
+  color: #c52d2f;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  float: left;
+  margin-right: 25px;
+}
+
+/* line 579, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.feature-wrap i:hover {
+  background: #c52d2f;
+  color: #fff;
+  box-shadow: inset 0 0 0 5px #c52d2f;
+  -webkit-box-shadow: inset 0 0 0 5px #c52d2f;
+  border: 3px solid #c52d2f;
+}
+
+/* line 587, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#recent-works .col-xs-12.col-sm-4.col-md-3 {
+  padding: 0;
+}
+
+/* line 591, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#recent-works {
+  padding-bottom: 70px;
+}
+
+/* line 595, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap {
+  position: relative;
+}
+
+/* line 599, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap img {
+  width: 100%;
+}
+
+/* line 603, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap .recent-work-inner {
+  top: 0;
+  background: transparent;
+  opacity: .8;
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* line 612, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap .recent-work-inner h3 {
+  margin: 10px 0;
+}
+
+/* line 616, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap .recent-work-inner h3 a {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* line 621, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 0;
+  background: #c52d2f;
+  color: #fff;
+  vertical-align: middle;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  padding: 30px;
+}
+
+/* line 639, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap .overlay .preview {
+  bottom: 0;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+/* line 650, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.recent-work-wrap:hover .overlay {
+  opacity: 1;
+}
+
+/* line 654, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#services {
+  background: #000 url(/assets/bg_services-c260e07a0a26b9a98481d753cc47330b8236b0331eb2a4a310aa64f8e117cb0d.png);
+  background-size: cover;
+}
+
+/* line 659, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#services .lead,
+#services h2 {
+  color: #fff;
+}
+
+/* line 664, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.services-wrap {
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 0 40px;
+}
+
+/* line 671, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.services-wrap h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* line 676, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.services-wrap .pull-left {
+  margin-right: 20px;
+}
+
+/* line 680, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#middle {
+  background: #f2f2f2;
+}
+
+/* line 684, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.skill h2 {
+  margin-bottom: 25px;
+}
+
+/* line 688, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress-wrap {
+  position: relative;
+}
+
+/* line 692, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color1,
+.progress .color1 .bar-width {
+  background: #2d7da4;
+}
+
+/* line 697, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color2,
+.progress .color2 .bar-width {
+  background: #6aa42f;
+}
+
+/* line 702, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color3,
+.progress .color3 .bar-width {
+  background: #ffcc33;
+}
+
+/* line 707, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color4,
+.progress .color4 .bar-width {
+  background: #db3615;
+}
+
+/* line 712, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress,
+.progress-bar {
+  height: 15px;
+  line-height: 15px;
+  background: #e6e6e6;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  text-align: right;
+}
+
+/* line 725, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress {
+  position: relative;
+}
+
+/* line 729, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .bar-width {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  top: -30px;
+  border-radius: 2px;
+  margin-left: -30px;
+}
+
+/* line 742, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress span {
+  position: relative;
+}
+
+/* line 746, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress span:before {
+  content: " ";
+  position: absolute;
+  width: auto;
+  height: auto;
+  border-width: 8px 5px;
+  border-style: solid;
+  bottom: -15px;
+  right: 8px;
+}
+
+/* line 757, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color1 span:before {
+  border-color: #2d7da4 transparent transparent transparent;
+}
+
+/* line 761, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color2 span:before {
+  border-color: #6aa42f transparent transparent transparent;
+}
+
+/* line 765, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color3 span:before {
+  border-color: #ffcc33 transparent transparent transparent;
+}
+
+/* line 769, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.progress .color4 span:before {
+  border-color: #db3615 transparent transparent transparent;
+}
+
+/* line 773, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.accordion h2 {
+  margin-bottom: 25px;
+}
+
+/* line 777, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-default {
+  border-color: transparent;
+}
+
+/* line 781, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-default > .panel-heading,
+.panel {
+  background-color: #e6e6e6;
+  border: 0 none;
+  box-shadow: none;
+}
+
+/* line 788, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-default > .panel-heading + .panel-collapse .panel-body {
+  background: #fff;
+  color: #858586;
+}
+
+/* line 793, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-body {
+  padding: 20px 20px 10px;
+}
+
+/* line 797, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-group .panel + .panel {
+  margin-top: 0;
+  border-top: 1px solid #d9d9d9;
+}
+
+/* line 802, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-group .panel {
+  border-radius: 0;
+}
+
+/* line 806, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-heading {
+  border-radius: 0;
+}
+
+/* line 810, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-title > a {
+  color: #4e4e4e;
+}
+
+/* line 814, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.accordion-inner img {
+  border-radius: 4px;
+}
+
+/* line 818, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.accordion-inner h4 {
+  margin-top: 0;
+}
+
+/* line 822, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-heading.active {
+  background: #1f1f20;
+}
+
+/* line 826, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-heading.active .panel-title > a {
+  color: #fff;
+}
+
+/* line 830, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+a.accordion-toggle i {
+  width: 45px;
+  line-height: 44px;
+  font-size: 20px;
+  margin-top: -10px;
+  text-align: center;
+  margin-right: -15px;
+  background: #c9c9c9;
+}
+
+/* line 840, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-heading.active a.accordion-toggle i {
+  background: #c52d2f;
+  color: #fff;
+}
+
+/* line 845, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.panel-heading.active a.accordion-toggle.collapsed i {
+  background: #c52d2f;
+  color: #fff;
+}
+
+/* line 850, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs > li {
+  margin-bottom: 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* line 855, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs {
+  border-bottom: transparent;
+  border-right: 1px solid #e6e6e6;
+}
+
+/* line 860, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs > li > a {
+  background: #f5f5f5;
+  color: #666;
+  border-radius: 0;
+  border: 0 none;
+  line-height: 24px;
+  margin-right: 0;
+  padding: 13px 15px;
+}
+
+/* line 870, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs li:last-child {
+  border-bottom: 0 none;
+}
+
+/* line 874, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-stacked > li + li {
+  margin-top: 0;
+}
+
+/* line 878, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs > li > a:hover {
+  background: #1f1f20;
+  color: #fff;
+}
+
+/* line 883, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: 0;
+  color: #fff;
+  background: #1f1f20;
+  position: relative;
+}
+
+/* line 892, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.nav-tabs > li.active > a:after {
+  position: absolute;
+  content: "";
+  width: auto;
+  height: auto;
+  border-style: solid;
+  border-color: transparent transparent transparent #1f1f20;
+  border-width: 25px 22px;
+  right: -44px;
+  top: 0;
+}
+
+/* line 904, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tab-wrap {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+}
+
+/* line 909, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tab-content {
+  padding: 20px;
+}
+
+/* line 913, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tab-content h2 {
+  margin-top: 0;
+}
+
+/* line 917, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tab-content img {
+  border-radius: 4px;
+}
+
+/* line 921, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.testimonial h2 {
+  margin-top: 0;
+}
+
+/* line 925, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.testimonial-inner {
+  color: #858586;
+  font-size: 14px;
+}
+
+/* line 930, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.testimonial-inner .pull-left {
+  border-right: 1px solid #e7e7e7;
+  padding-right: 15px;
+  position: relative;
+}
+
+/* line 936, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.testimonial-inner .pull-left:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  margin-top: -5px;
+  background: #FFF;
+  -webkit-transform: rotate(45deg);
+  border: 1px solid #e7e7e7;
+  right: -5px;
+  border-left: 0 none;
+  border-bottom: 0 none;
+}
+
+/* line 951, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#partner {
+  background: url(/assets/partners/partner_bg-ea08ccecf9e87d95c863dd3b77882caa8c9f7f1024bc559728944a4648b87616.png) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+/* line 956, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#partner {
+  color: #fff;
+  text-align: center;
+}
+
+/* line 961, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#partner h2,
+#partner h3 {
+  color: #fff;
+}
+
+/* line 966, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.partners ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 972, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.partners ul li {
+  display: inline-block;
+  float: left;
+  width: 20%;
+}
+
+/* line 978, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#conatcat-info {
+  background: #fff url(/assets/contact-bebf750ac19f4bb9bff00e887dbc7d7521c90621ffef11ff67845e17e8554ad5.png) no-repeat 90% 0;
+  padding: 30px 0;
+}
+
+/* line 983, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.contact-info i {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+  background: #000;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* line 994, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.contact-info h2 {
+  margin-top: 0;
+  color: #000;
+}
+
+/* line 999, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.contact-info {
+  color: #000;
+}
+
+/*************************
+********* About Us Page CSS ******
+**************************/
+/* line 1007, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.about-us {
+  margin-top: 110px;
+  margin-bottom: -110px;
+}
+
+/* line 1012, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.about-us h2,
+.skill_text h2 {
+  color: #4e4e4e;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* line 1019, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.about-us p {
+  color: #4e4e4e;
+}
+
+/* line 1023, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider {
+  position: relative;
+}
+
+/* line 1027, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider .carousel-indicators {
+  bottom: -25px;
+}
+
+/* line 1031, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider .carousel-indicators li {
+  border: 1px solid #ffbd20;
+}
+
+/* line 1035, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider a i {
+  border: 1px solid #777;
+  border-radius: 50%;
+  font-size: 28px;
+  height: 50px;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  color: #777;
+}
+
+/* line 1047, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider a i:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+/* line 1053, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider
+.carousel-control {
+  width: inherit;
+}
+
+/* line 1058, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider .carousel-control.left i {
+  left: -25px;
+}
+
+/* line 1062, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider .carousel-control.right i {
+  right: -25px;
+}
+
+/* line 1066, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#carousel-slider
+.carousel-control.left,
+#carousel-slider
+.carousel-control.right {
+  background: none;
+}
+
+/* line 1073, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.skill_text {
+  display: block;
+  margin-bottom: 60px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+/* line 1080, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.sinlge-skill {
+  background: #f2f2f2;
+  border-radius: 100%;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: bold;
+  height: 200px;
+  position: relative;
+  width: 200px;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+/* line 1095, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.sinlge-skill p em {
+  color: #FFFFFF;
+  font-size: 38px;
+}
+
+/* line 1100, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.sinlge-skill p {
+  line-height: 1;
+}
+
+/* line 1104, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.joomla-skill,
+.html-skill,
+.css-skill,
+.wp-skill {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+  border-radius: 100%;
+  padding: 70px 0;
+  text-align: center;
+}
+
+/* line 1118, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.joomla-skill {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #f2f2f2 28%, #2d7da4 28%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(28%, #f2f2f2), color-stop(28%, #2d7da4));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #f2f2f2 28%, #2d7da4 28%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f2f2f2 0%, #f2f2f2 28%, #2d7da4 28%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #f2f2f2 28%, #2d7da4 28%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #f2f2f2 28%, #2d7da4 28%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#2d7da4',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 1129, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.html-skill {
+  background: #f2f2f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #f2f2f2 9%, #6aa42f 9%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(9%, #f2f2f2), color-stop(9%, #6aa42f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #f2f2f2 9%, #6aa42f 9%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f2f2f2 0%, #f2f2f2 9%, #6aa42f 9%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #f2f2f2 9%, #6aa42f 9%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #f2f2f2 9%, #6aa42f 9%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#6aa42f',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 1140, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.css-skill {
+  background: #f2f2f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #f2f2f2 32%, #ffbd20 32%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(32%, #f2f2f2), color-stop(32%, #ffbd20));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #f2f2f2 32%, #ffbd20 32%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f2f2f2 0%, #f2f2f2 32%, #ffbd20 32%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #f2f2f2 32%, #ffbd20 32%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #f2f2f2 32%, #ffbd20 32%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffbd20',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 1151, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.wp-skill {
+  background: #f2f2f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #f2f2f2 19%, #db3615 19%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(19%, #f2f2f2), color-stop(19%, #db3615));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #f2f2f2 19%, #db3615 19%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f2f2f2 0%, #f2f2f2 19%, #db3615 19%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #f2f2f2 19%, #db3615 19%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #f2f2f2 19%, #db3615 19%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#db3615',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 1162, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.skill-wrap {
+  display: block;
+  overflow: hidden;
+  margin: 60px 0;
+}
+
+/* line 1168, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team h4 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+/* line 1173, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team h5 {
+  font-weight: 300;
+}
+
+/* line 1177, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.single-profile-top,
+.single-profile-bottom {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* line 1183, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.single-profile-top,
+.single-profile-bottom {
+  border: 1px solid #ddd;
+  padding: 15px;
+  position: relative;
+}
+
+/* line 1190, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.media_image {
+  margin-bottom: 10px;
+}
+
+/* line 1194, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .btn {
+  background: transparent;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 3px;
+  padding: 1px 5px;
+  text-transform: uppercase;
+  border: 1px solid #ddd;
+  margin-right: 3px;
+}
+
+/* line 1206, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social_icons,
+ul.tag {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: block;
+}
+
+/* line 1214, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social_icons li,
+ul.tag li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* line 1220, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.social_icons li a i {
+  border-radius: 50%;
+  color: #FFFFFF;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+  width: 25px;
+  opacity: .8;
+}
+
+/* line 1233, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .social_icons .fa-facebook:hover,
+.team .social_icons .fa-twitter:hover,
+.team .social_icons .fa-google-plus:hover {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transition-duration: 2s;
+  transition-property: all;
+  transition-timing-function: ease;
+  opacity: 1;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+/* line 1249, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .social_icons .fa-facebook {
+  background: #0182c4;
+}
+
+/* line 1253, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .social_icons .fa-twitter {
+  background: #20B8FF;
+}
+
+/* line 1257, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .social_icons .fa-google-plus {
+  background: #D34836;
+}
+
+/* line 1262, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .first-one-arrow {
+  float: left;
+  margin-right: 30px;
+  width: 2%;
+}
+
+/* line 1268, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .first-arrow {
+  float: left;
+  margin-left: 5px;
+  margin-right: 35px;
+  width: 22%;
+}
+
+/* line 1275, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .second-arrow {
+  float: left;
+  margin-left: 5px;
+  width: 21%;
+}
+
+/* line 1281, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .third-arrow {
+  float: left;
+  margin-left: 40px;
+  margin-right: 12px;
+  width: 22%;
+}
+
+/* line 1288, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .fourth-arrow {
+  float: left;
+  margin-left: 25px;
+  width: 20%;
+}
+
+/* line 1294, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .first-one-arrow hr {
+  border-bottom: 1px solid #2D7DA4;
+  border-top: 1px solid #2D7DA4;
+}
+
+/* line 1299, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .first-arrow hr {
+  border-bottom: 1px solid #2D7DA4;
+  border-top: 1px solid #2D7DA4;
+}
+
+/* line 1304, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .second-arrow hr {
+  border-bottom: 1px solid #6aa42f;
+  border-top: 1px solid #6aa42f;
+}
+
+/* line 1309, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .third-arrow hr {
+  border-bottom: 1px solid #FFBD20;
+  border-top: 1px solid #FFBD20;
+}
+
+/* line 1315, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .fourth-arrow hr {
+  border-bottom: 1px solid #db3615;
+  border-top: 1px solid #db3615;
+}
+
+/* line 1320, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* line 1326, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar i {
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  margin-top: -32px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: 24px;
+  position: absolute;
+}
+
+/* line 1340, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .first-arrow .fa-angle-up {
+  background: #2D7DA4;
+  margin-left: -33px;
+}
+
+/* line 1345, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .second-arrow .fa-angle-down {
+  background: #6AA42F;
+  margin-left: -33px;
+}
+
+/* line 1350, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .third-arrow .fa-angle-up {
+  background: #FFBD20;
+  margin-left: -32px;
+}
+
+/* line 1355, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team-bar .fourth-arrow .fa-angle-down {
+  background: #db3615;
+  margin-left: -32px;
+}
+
+/* line 1360, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-top:before,
+.team .single-profile-top:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* line 1369, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-top:before {
+  left: 26px;
+  bottom: -20px;
+  border-width: 10px;
+  border-color: #fff transparent transparent transparent;
+  z-index: 1;
+}
+
+/* line 1378, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-top:after {
+  left: 25px;
+  bottom: -22px;
+  border-style: solid;
+  border-width: 11px;
+  border-color: #ddd transparent transparent transparent;
+  z-index: 0;
+}
+
+/* line 1387, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-bottom:before,
+.team .single-profile-bottom:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* line 1396, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-bottom:before {
+  left: 30px;
+  top: -20px;
+  border-width: 10px;
+  border-color: transparent transparent #fff transparent;
+  z-index: 1;
+}
+
+/* line 1404, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.team .single-profile-bottom:after {
+  left: 29px;
+  top: -22px;
+  border-style: solid;
+  border-width: 11px;
+  border-color: transparent transparent #DDD transparent;
+  z-index: 0;
+}
+
+/***********************
+****Service page css****
+***********************/
+/* line 1417, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.services {
+  padding: 0;
+}
+
+/* line 1421, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.get-started {
+  background: none repeat scroll 0 0 #F3F3F3;
+  border-radius: 3px;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 18px;
+  margin-top: 60px;
+}
+
+/* line 1430, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.get-started h2 {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* line 1435, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.request {
+  bottom: -15px;
+  left: 50%;
+  position: absolute;
+  margin-left: -110px;
+}
+
+/* line 1442, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.request h4 {
+  position: absolute;
+  width: 220px;
+  position: relative;
+}
+
+/* line 1448, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.request h4 a {
+  background: #c52d2f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+/* line 1457, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.request h4:after {
+  border-color: #c52d2f transparent transparent;
+  border-style: solid;
+  border-width: 12px;
+  bottom: -18px;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 13px;
+  z-index: -99999;
+}
+
+/* line 1469, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.request h4:before {
+  border-color: #c52d2f transparent transparent;
+  border-style: solid;
+  border-width: 12px;
+  bottom: -18px;
+  content: "";
+  height: 0;
+  left: 13px;
+  position: absolute;
+  z-index: -99999;
+}
+
+/* line 1481, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-area {
+  padding: 60px;
+}
+
+/* line 1485, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-comments {
+  background-image: url("../images/image_bg.png");
+  background-position: center 118px;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+}
+
+/* line 1492, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-comments img {
+  background: #DDDDDD;
+  border: 1px solid #DDDDDD;
+  height: 182px;
+  padding: 3px;
+  width: 182px;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+/* line 1504, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-comments h3 {
+  margin-top: 55px;
+  font-weight: 300;
+  padding: 0 40px;
+}
+
+/* line 1510, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-comments h4 {
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+/* line 1516, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.clients-comments h4 span {
+  font-weight: 700;
+  font-style: oblique;
+}
+
+/* line 1521, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.footer {
+  background: none repeat scroll 0 0 #2E2E2E;
+  border-top: 5px solid #C52D2F;
+  height: 84px;
+  margin-top: 110px;
+}
+
+/* line 1528, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.footer_left {
+  padding: 10px;
+}
+
+/* line 1532, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.text-left {
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+/*************************
+********* Portfolio CSS ******
+**************************/
+/* line 1542, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#portfolio_page {
+  margin-top: 115px;
+  padding-bottom: 0;
+}
+
+/* line 1547, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-items,
+.portfolio-filter {
+  list-style: none outside none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+/* line 1554, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-filter > li {
+  display: inline-block;
+}
+
+/* line 1558, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-filter > li a {
+  background: none repeat scroll 0 0 #FFFFFF;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 20px;
+  text-transform: uppercase;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+  border: 1px solid #F2F2F2;
+  outline: none;
+  border-radius: 3px;
+}
+
+/* line 1573, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-filter > li a:hover,
+.portfolio-filter > li a.active {
+  color: #fff;
+  background: #c52d2f;
+  border: 1px solid #c52d2f;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/* line 1582, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-items > li {
+  float: left;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1590, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.portfolio-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+/* line 1597, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 1601, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+/* line 1607, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 1616, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 1624, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 1633, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+/* disable CSS transitions for containers with infinite scrolling*/
+/* line 1645, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/**************************
+********* Pricing Table CSS *
+**************************/
+/* line 1658, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing_heading {
+  margin-top: 120px;
+}
+
+/* line 1662, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing_heading h2,
+.pricing_heading p {
+  color: #4e4e4e;
+}
+
+/* line 1667, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area h1 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* line 1673, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* line 1678, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area h3,
+.pricing-area span {
+  color: #fff;
+}
+
+/* line 1683, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.plan {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+/* line 1688, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area ul {
+  background: #FAFAFA;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1694, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area ul li {
+  list-style: none;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 1701, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area ul li:nth-child(even) {
+  background: #f5f5f5;
+}
+
+/* line 1705, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .price-three img,
+.pricing-area .price-six img {
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+/* line 1712, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-one,
+.pricing-area .heading-two,
+.pricing-area .heading-three {
+  padding: 17px 0;
+  border-radius: 2px 2px 0 0;
+}
+
+/* line 1719, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-one,
+.pricing-area .heading-two,
+.pricing-area .heading-three,
+.pricing-area .heading-four,
+.pricing-area .heading-five,
+.pricing-area .heading-six,
+.pricing-area .heading-seven {
+  margin-left: -10px;
+}
+
+/* line 1730, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-one,
+.pricing-area .price-one .plan-action .btn-primary {
+  background: #e24f43;
+}
+
+/* line 1735, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-two,
+.pricing-area .price-two .plan-action .btn-primary {
+  background: #27AE60;
+}
+
+/* line 1740, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-three,
+.pricing-area .price-three .plan-action .btn-primary {
+  background: #f39c12;
+}
+
+/* line 1745, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-four,
+.pricing-area .price-four .plan-action .btn-primary {
+  background: #5c5c5c;
+}
+
+/* line 1750, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-five,
+.pricing-area .price-five .plan-action .btn-primary {
+  background: #5c5c5c;
+}
+
+/* line 1755, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-six,
+.pricing-area .price-six .plan-action .btn-primary {
+  background: #e24f43;
+}
+
+/* line 1761, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-seven,
+.pricing-area .price-seven .plan-action .btn-primary {
+  background: #5c5c5c;
+}
+
+/* line 1766, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .bg {
+  background: #fafafa;
+}
+
+/* line 1770, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-one h3:before {
+  border-color: #bf4539 transparent transparent;
+}
+
+/* line 1774, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-two h3:before {
+  border-color: #1f8c4d transparent transparent;
+}
+
+/* line 1778, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-three h3:before {
+  border-color: #d4880f transparent transparent;
+}
+
+/* line 1782, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-four h3:before {
+  border-color: #424242 transparent transparent;
+}
+
+/* line 1786, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-five h3:before {
+  border-color: #424242 transparent transparent;
+}
+
+/* line 1790, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-six h3:before {
+  border-color: #bf4539 transparent transparent;
+}
+
+/* line 1794, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .heading-seven h3:before {
+  border-color: #424242 transparent transparent;
+}
+
+/* line 1798, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area h3:before {
+  border-color: #D4880F transparent transparent;
+  border-radius: 5px 0 0 0px;
+  border-style: solid;
+  border-width: 12px;
+  content: "";
+  height: 0;
+  left: 4px;
+  position: absolute;
+  top: 78px;
+  width: 0;
+  z-index: -999;
+}
+
+/* line 1812, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.small-pricing h3:after {
+  height: 94px;
+}
+
+/* line 1816, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.small-pricing h3:before {
+  top: 74px;
+}
+
+/* line 1820, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.plan-action {
+  height: 40px;
+}
+
+/* line 1824, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .plan-action .btn-primary {
+  position: relative;
+  padding: 5px 20px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+/* line 1832, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .plan-action .btn-primary:before {
+  border-color: #E24F43 transparent transparent;
+  border-radius: 5px 0 0 0;
+  border-style: solid;
+  border-width: 12px;
+  bottom: -12px;
+  content: "";
+  height: 0;
+  left: -9px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+/* line 1846, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .plan-action .btn-primary:after {
+  border-color: #E24F43 transparent transparent;
+  border-radius: 5px 0 0 0;
+  border-style: solid;
+  border-width: 12px;
+  bottom: -12px;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -9px;
+  width: 0;
+  z-index: -1;
+}
+
+/* line 1860, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .price-two .plan-action .btn-primary:before,
+.pricing-area .price-two .plan-action .btn-primary:after {
+  border-color: #1f8c4d transparent transparent;
+}
+
+/* line 1865, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .price-three .plan-action .btn-primary:before,
+.pricing-area .price-three .plan-action .btn-primary:after {
+  border-color: #d4880f transparent transparent;
+}
+
+/* line 1870, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .price-four .plan-action .btn-primary:before,
+.pricing-area .price-four .plan-action .btn-primary:after,
+.pricing-area .price-five .plan-action .btn-primary:before,
+.pricing-area .price-five .plan-action .btn-primary:after,
+.pricing-area .price-seven .plan-action .btn-primary:before,
+.pricing-area .price-seven .plan-action .btn-primary:after {
+  border-color: #424242 transparent transparent;
+  right: -9px;
+}
+
+/* line 1880, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.pricing-area .price-six .plan-action .btn-primary:before,
+.pricing-area .price-six .plan-action .btn-primary:after {
+  border-color: #bf4539 transparent transparent;
+  right: -9px;
+}
+
+/*************************
+********* Contact Us CSS ******
+**************************/
+/* line 1891, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.gmap-area {
+  background-image: url("../images/map.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+/* line 1899, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.gmap-area .gmap iframe {
+  border-radius: 50%;
+  height: 280px;
+  width: 300px;
+}
+
+/* line 1905, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.gmap {
+  border: 10px solid #f6f5f0;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 0px 3px 3px #e7e4dc;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 1916, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.gmap-area .map-content ul {
+  list-style: none;
+}
+
+/* line 1920, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.gmap-area .map-content address h5 {
+  font-weight: 700;
+  /* font-size: 16px; */
+}
+
+/* line 1925, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#contact-page {
+  padding-top: 0;
+}
+
+/* line 1929, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#contact-page .contact-form
+.form-group label {
+  color: #4E4E4E;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 1936, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.form-group .form-control {
+  padding: 7px 12px;
+  border-color: #f2f2f2;
+  box-shadow: none;
+}
+
+/* line 1942, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+textarea#message {
+  resize: none;
+  padding: 10px;
+}
+
+/* line 1947, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#contact-page .contact-wrap {
+  margin-top: 20px;
+}
+
+/*********************
+****blog page css*****
+**********************/
+/* line 1955, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.widget {
+  margin-bottom: 60px;
+  padding-left: 0;
+}
+
+/* line 1960, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.single_comments {
+  margin-bottom: 20px;
+}
+
+/* line 1964, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.single_comments img {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+/* line 1970, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.single_comments p {
+  margin-bottom: 0;
+}
+
+/* line 1974, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.widget .entry-meta span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 1979, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.widget h3 {
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* line 1985, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1991, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_category li {
+  float: none;
+  margin-bottom: 20px;
+}
+
+/* line 1996, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_category li a {
+  background: #f5f5f5;
+  border-radius: 4px;
+  color: #888;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+/* line 2004, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_category li a:hover {
+  background: #c52d2f;
+  color: #fff;
+}
+
+/* line 2009, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.badge:before {
+  border-color: transparent transparent transparent #c52d2f;
+  border-style: solid;
+  border-width: 10px;
+  bottom: -8px;
+  content: "";
+  height: 0;
+  left: 5px;
+  position: absolute;
+  z-index: -99999;
+}
+
+/* line 2021, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.badge {
+  background-color: #c52d2f;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px;
+  position: relative;
+  left: 60px;
+  top: -18px;
+  font-weight: normal;
+}
+
+/* line 2032, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_archieve {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2038, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_archieve li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* line 2043, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog_archieve li:first-child {
+  padding-top: 0;
+}
+
+/* line 2047, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 2053, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.gallery li {
+  display: block;
+  width: 60px;
+  padding: 0;
+  margin: 0 4px 4px 0;
+  float: left;
+}
+
+/* line 2061, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 2066, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq li {
+  margin-top: 30px;
+}
+
+/* line 2070, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq li:first-child {
+  margin-top: 0;
+}
+
+/* line 2074, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq li span.number {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #34495e;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* line 2086, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq li > div {
+  margin-left: 70px;
+}
+
+/* line 2090, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.faq li > div h3 {
+  margin-top: 0;
+}
+
+/* line 2095, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 2103, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 2113, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog-item {
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* line 2119, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .img-blog {
+  border-radius: 5px;
+  margin-bottom: 45px;
+}
+
+/* line 2124, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .blog-content {
+  padding-bottom: 25px;
+}
+
+/* line 2128, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .blog-content h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+/* line 2133, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.readmore {
+  margin-top: 0;
+}
+
+/* line 2137, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .blog-content h3 {
+  color: #858586;
+  margin-bottom: 40px;
+}
+
+/* line 2142, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .blog-content h4 {
+  font-size: 14px;
+}
+
+/* line 2150, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .entry-meta {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 2155, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .entry-meta > span {
+  background: #f5f5f5;
+  border-top: 1px solid #fff;
+  display: block;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 5px;
+  text-align: left;
+}
+
+/* line 2165, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#publish_date {
+  background: #c52d2f;
+  border-bottom: 5px solid #4e4e4e;
+  color: #fff;
+  padding: 5px 0;
+  text-align: center;
+}
+
+/* line 2173, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .entry-meta > span {
+  color: #ccc;
+}
+
+/* line 2177, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.blog .blog-item .entry-meta > span a {
+  font-size: 12px;
+  margin-left: 3px;
+  font-weight: 300;
+  color: #888;
+}
+
+/* line 2184, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.pagination > li > a {
+  border: 1px solid #F1F1F1;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 14px;
+}
+
+/* line 2192, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.pagination > li > a i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 2197, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.pagination > li.active > a,
+ul.pagination > li:hover > a {
+  background-color: #c52d2f !important;
+  border-color: #c52d2f !important;
+  color: #fff;
+}
+
+/* line 2204, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.search_box {
+  background-image: url(/images/search_icon.png);
+  background-position: 314px 15px;
+  background-repeat: no-repeat;
+  border-color: #DEDEDE;
+  height: 48px;
+  outline: medium none;
+  box-shadow: none;
+}
+
+/* line 2214, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.form-control:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
+
+/* line 2220, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+ul.tag-cloud,
+ul.sidebar-gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 2227, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tag-cloud li {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+/* line 2232, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tag-cloud li a {
+  background: #f5f5f5;
+  color: #888;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+
+/* line 2240, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.tag-cloud li a:hover {
+  background: #c52d2f;
+  color: #fff;
+}
+
+/* line 2245, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.sidebar-gallery li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+/* line 2250, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.sidebar-gallery li a {
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/**********************
+**blog single page css*
+**********************/
+/* line 2260, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.reply_section {
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+/* line 2265, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply {
+  margin-left: 10px;
+  margin-top: 45px;
+}
+
+/* line 2270, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply img {
+  width: 85px;
+  height: 85px;
+  border: 5px solid #D5D8DD;
+}
+
+/* line 2276, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+
+/* line 2283, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li {
+  float: left;
+}
+
+/* line 2287, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a {
+  display: block;
+}
+
+/* line 2291, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a i {
+  border: 1px solid #DDDDDD;
+  border-radius: 39px;
+  color: #FFFFFF;
+  font-size: 20px;
+  height: 30px;
+  margin-right: 3px;
+  padding-top: 7px;
+  text-align: center;
+  width: 30px;
+}
+
+/* line 2303, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a i.fa-facebook {
+  background: #0182C4;
+}
+
+/* line 2307, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a i.fa-twitter {
+  background: none repeat scroll 0 0 #3FC1FE;
+}
+
+/* line 2311, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a i.fa-google-plus {
+  background: none repeat scroll 0 0 #D34836;
+}
+
+/* line 2315, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply ul li a i:hover {
+  opacity: .5;
+}
+
+/* line 2319, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_content {
+  margin: 30px;
+}
+
+/* line 2323, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_content h1 a:hover {
+  color: #FFC800;
+}
+
+/* line 2327, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_content h4 {
+  margin-bottom: 50px;
+}
+
+/* line 2331, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.reply_section .media-body {
+  display: inherit;
+}
+
+/* line 2335, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.comment_section .media-body {
+  display: inherit;
+}
+
+/* line 2339, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#comments_title {
+  color: #4e4e4e;
+  font-weight: 700px;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* line 2346, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.comment_section {
+  margin-top: 30px;
+  position: relative;
+}
+
+/* line 2351, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_comments img {
+  width: 85px;
+  height: 85px;
+  margin-top: 35px;
+}
+
+/* line 2357, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments {
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+/* line 2363, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments:before {
+  border-color: transparent #F0F0F0 transparent transparent;
+  border-style: solid;
+  border-width: 15px;
+  content: " ";
+  height: 0;
+  left: 75px;
+  position: absolute;
+  top: 20px;
+}
+
+/* line 2374, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments h3,
+.post_reply_content h3 {
+  margin-top: 0;
+}
+
+/* line 2379, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments h1 a:hover {
+  color: #c52d2f;
+}
+
+/* line 2383, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments h4 {
+  color: #c4c4c5;
+  font-weight: 400;
+}
+
+/* line 2388, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments p {
+  padding-bottom: 30px;
+}
+
+/* line 2392, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments a {
+  bottom: 15px;
+  position: absolute;
+  right: 30px;
+  background: #c52d2f;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+/* line 2402, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.post_reply_comments a:before {
+  border-color: #c52d2f transparent transparent;
+  border-style: solid;
+  border-width: 16px;
+  bottom: -11px;
+  content: "";
+  height: 0;
+  left: -12px;
+  position: absolute;
+  z-index: 99999;
+}
+
+/* line 2418, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.message_heading {
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+/******************
+ 404 page css
+ ******************/
+/* line 2428, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#error .btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success:hover {
+  background-color: #EBEBEB;
+  border-color: #EBEBEB;
+  color: #4E4E4E;
+}
+
+/* line 2438, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#error h1 {
+  color: #4e4e4e;
+  text-transform: uppercase;
+}
+
+/******************
+shortcodes page css
+******************/
+/* line 2448, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.shortcode-item {
+  padding-bottom: 0;
+}
+
+/* line 2452, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+.shortcode-item h2 {
+  color: #4E4E4E;
+  font-size: 24px;
+  margin-bottom: 22px;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/***********************
+********* Footer ******
+************************/
+/* line 2465, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom {
+  background: #f5f5f5;
+  border-bottom: 5px solid #c52d2f;
+  font-size: 14px;
+}
+
+/* line 2471, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #000;
+}
+
+/* line 2479, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 2485, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom ul li {
+  display: block;
+  padding: 5px 0;
+}
+
+/* line 2490, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom ul li a {
+  color: #808080;
+}
+
+/* line 2494, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom ul li a:hover {
+  color: #c52d2f;
+}
+
+/* line 2498, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#bottom .widget {
+  margin-bottom: 0;
+}
+
+/* line 2502, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  background: #2e2e2e;
+}
+
+/* line 2509, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#footer a {
+  color: #fff;
+}
+
+/* line 2513, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#footer a:hover {
+  color: #c52d2f;
+}
+
+/* line 2517, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 2523, /home/wsantacruz/Proyectos/alfarero/vendor/assets/stylesheets/plugins/main/main.css.scss */
+#footer ul > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/*
+
+ */
