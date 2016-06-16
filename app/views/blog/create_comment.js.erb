@@ -1,0 +1,10 @@
+$("ul#errors").children('li').remove();
+<% if @created_comment==true %>  
+	$("<%= escape_javascript(render :partial=> '/blog/new_comment', object: @blog_comment )%>").appendTo("div.comment_section");
+	document.getElementById("new_blog_comment").reset();
+	$("div#notice").html($("<div class='alert alert-info'>Comentario creado</div>"));
+<% else %>
+	<% @blog_comment.errors.full_messages.each do |message| %>
+		$("ul#errors").append($("<li />").html("<%= message.html_safe %>"));
+	<% end %>
+<% end %> 

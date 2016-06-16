@@ -6,7 +6,7 @@
                 <span id="publish_date"><%= b.created_at.strftime('%d %B')%></span>
                 <span><i class="fa fa-user"></i> <a href="#"><%= b.admin.names.truncate(12) unless b.admin.nil?%></a></span>
                 <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                <span><i class="fa fa-list"></i><a href="#">56 Likes</a></span>
+                <span><i class="fa fa-list"></i><a href="#"><%= b.blog_comments_count%> Comentarios</a></span>
             </div>
         </div>
             

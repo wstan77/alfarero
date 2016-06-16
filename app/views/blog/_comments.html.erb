@@ -1,27 +1,15 @@
 <h3>Recent Comments</h3>
 <div class="row">
     <div class="col-sm-12">
+        <% @blog_comments.limit(5).each do |msj|%>
         <div class="single_comments">
-            <img alt="" src="images/blog/avatar3.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+            <img alt="" src="<%=img_placehold("#{msj.name[0]}#{msj.name[1]}", 30, 12, true)%>">
+            <p><i>"<%=msj.message%>" </i></p>
             <div class="entry-meta small muted">
-                <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
+                <span>By <a href="#"><%=msj.name%></a></span>On <a href="#"><%=msj.blog_entry.title.truncate(35)%></a>
             </div>
-        </div>
-        <div class="single_comments">
-            <img alt="" src="images/blog/avatar3.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-            <div class="entry-meta small muted">
-                <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
-            </div>
-        </div>
-        <div class="single_comments">
-            <img alt="" src="images/blog/avatar3.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-            <div class="entry-meta small muted">
-                <span>By <a href="#">Alex</a></span>On <a href="#">Creative</a>
-            </div>
-        </div>
-        
+        </div> 
+        <hr>
+        <% end %>
     </div>
 </div> 

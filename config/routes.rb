@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "blog" => "blog#index", as: :blog_root 
   get "blog/:category" => "blog#category", as: :blog_category
   get "blog/:category/:blog" => "blog#show", as: :blog_show
+  post "blog/:blog/create_comment"=> "blog#create_comment", as: :blog_create_comment
 
   scope :admin, :as=>:admin do
     resources :admins, :controller=>"admin/admins"

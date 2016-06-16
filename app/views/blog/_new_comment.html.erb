@@ -1,0 +1,12 @@
+ 
+<article class="comment">
+  <a class="comment-img" href="#non">
+    <img src='<%=img_placehold("#{@blog_comment.name[0]}#{@blog_comment.name[1]}")%>' alt="" width="50" height="50">
+  </a>
+  <div class="comment-body">
+    <div class="text">
+      <p><%=@blog_comment.message%></p>
+    </div>
+    <p class="attribution">by <a href="#non"><%=@blog_comment.name%></a> Hace <%= time_ago_in_words(@blog_comment.created_at) %></p>
+  </div>
+</article> 

@@ -1,9 +1,4 @@
-<section class="container" id="blog">
-    <div class="center">
-        <h2>Blogs</h2>
-        <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-    </div>
-
+<section class="container" id="blog"> 
     <div class="blog">
         <div class="row">
             <div class="col-md-8">
@@ -14,8 +9,8 @@
                                 <div class="entry-meta">
                                     <span id="publish_date"><%= @blog.created_at.strftime('%d %B')%></span>
                                     <span><i class="fa fa-user"></i> <a href="#"><%= @blog.admin.names.truncate(12) unless @blog.admin.nil?%></a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                    <span><i class="fa fa-list"></i><a href="#">56 Likes</a></span>
+                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments"><%= @blog.blog_comments_count%> Comments</a></span>
+                                    <span><i class="fa fa-eye"></i><a href="#"><%= @blog.count_view%> Visto</a></span>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 blog-content">
@@ -37,29 +32,25 @@
                         </div>
                     </div><!--/.blog-item-->
                      
-                    <h1 id="comments_title">5 Comments</h1>
+                    <h1 id="comments_title"><%=@blog.blog_comments_count%> Comentarios</h1>
+
                     <div class="media comment_section">
-                        <div class="pull-left post_comments">
-                            <a href="#"><img alt="" class="img-circle" src="images/blog/girl.png"></a>
-                        </div>
-                        <div class="media-body post_reply_comments">
-                            <h3>Marsh</h3>
-                            <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p> 
-                        </div>
+                        <% @blog_comments.where(blog_entry_id: @blog.id).each do |msj|%>
+                        <article class="comment">
+                          <a class="comment-img" href="#non">
+                            <img src='<%=img_placehold("#{msj.name[0]}#{msj.name[1]}", 50, 12)%>' alt="" width="50" height="50">
+                          </a>
+                          <div class="comment-body">
+                            <div class="text">
+                              <p><%=msj.message%></p>
+                            </div>
+                            <p class="attribution">by <a href="#non"><%=msj.name%></a> Hace <%= time_ago_in_words(msj.created_at) %></p>
+                          </div>
+                        </article>  
+                        <% end %>
                     </div> 
-                    <div class="media comment_section">
-                        <div class="pull-left post_comments">
-                            <a href="#"><img alt="" class="img-circle" src="images/blog/boy2.png"></a>
-                        </div>
-                        <div class="media-body post_reply_comments">
-                            <h3>Marsh</h3>
-                            <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p> 
-                        </div>
-                    </div>  
 
-
+                    <div id="notice"></div>
                     <div id="contact-page clearfix">
                         <div style="display: none" class="status alert alert-success"></div>
                         <div class="message_heading">
@@ -78,14 +69,115 @@
                 </div><!--/.search-->
 				
 				<div class="widget categories">
-                    <%= render partial: "comments" %>                      
+                    <%= render partial: "comments" unless @blog_comments.size == 0 %>                      
                 </div><!--/.recent comments--> 
 
-                <%= render partial: "categories" %> 
+                <%= render partial: "categories" unless @categories.size == 0  %> 
                 <div class="widget tags">
                     <%= render partial: "tags" %> 
-                </div><!--/.tags-->   
+                </div><!--/.tags-->  
+                 
             </aside>      
         </div><!--/.row--> 
      </div><!--/.blog--> 
 </section>
+
+<style>
+    
+
+p {
+    margin: 0 0 1em;
+}
+
+.comment {
+    overflow: hidden;
+    padding: 0 0 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1em;
+    *zoom: 1;
+}
+
+.comment-img {
+    float: left;
+    margin-right: 33px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.comment-img img {
+    display: block;
+}
+
+.comment-body {
+    overflow: hidden;
+}
+
+.comment .text {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.comment .text p:last-child {
+    margin: 0;
+}
+
+.comment .attribution {
+    margin: 0.5em 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Decoration */
+
+.comments,
+.comment {
+    position: relative;
+}
+
+.comments:before,
+.comment:before,
+.comment .text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+}
+
+.comments:before {
+    width: 3px;
+    top: -20px;
+    bottom: -20px;
+    background: rgba(0,0,0,0.1);
+}
+
+.comment:before {
+    width: 9px;
+    height: 9px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    margin: 16px 0 0 -6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.1);
+    background: #ccc;
+}
+
+.comment:hover:before {
+    background: orange;
+}
+
+.comment .text:before {
+    top: 18px;
+    left: 78px;
+    width: 9px;
+    height: 9px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}​
+</style>

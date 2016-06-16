@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526163230) do
+ActiveRecord::Schema.define(version: 20160616161120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,17 +66,33 @@ ActiveRecord::Schema.define(version: 20160526163230) do
 
   add_index "blog_categories", ["admin_id"], name: "index_blog_categories_on_admin_id", using: :btree
 
+  create_table "blog_comments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.integer  "blog_entry_id"
+    t.boolean  "is_anonymous",  default: false
+    t.integer  "status"
+    t.integer  "revised_by"
+    t.datetime "revised_at"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "blog_comments", ["blog_entry_id"], name: "index_blog_comments_on_blog_entry_id", using: :btree
+
   create_table "blog_entries", force: :cascade do |t|
     t.integer  "admin_id"
     t.string   "title"
     t.string   "intro"
     t.text     "content"
     t.string   "previus_img"
-    t.boolean  "is_deleted",       default: false
-    t.integer  "count_view",       default: 0
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.boolean  "is_deleted",          default: false
+    t.integer  "count_view",          default: 0
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "blog_category_id"
+    t.integer  "blog_comments_count", default: 0
   end
 
   add_index "blog_entries", ["admin_id"], name: "index_blog_entries_on_admin_id", using: :btree
@@ -95,6 +111,7 @@ ActiveRecord::Schema.define(version: 20160526163230) do
 
   add_foreign_key "advertisements", "admins"
   add_foreign_key "blog_categories", "admins"
+  add_foreign_key "blog_comments", "blog_entries"
   add_foreign_key "blog_entries", "admins"
   add_foreign_key "blog_entries", "blog_categories"
   add_foreign_key "capsules", "admins"

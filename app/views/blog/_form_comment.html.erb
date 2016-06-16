@@ -1,23 +1,18 @@
-<form role="form" action="sendemail.php" method="post" name="contact-form" class="contact-form" id="main-contact-form">
+ 
+<%= simple_form_for(@blog_comment, url: blog_create_comment_path(@blog), method: :post, remote: true) do |f|%>
+    <div class="errors"><ul id="errors" style="color:#790E0E"></ul></div>
     <div class="row">
         <div class="col-sm-5">
-            <div class="form-group">
-                <label>Name *</label>
-                <input type="text" required="required" class="form-control">
-            </div>                
+            <%= f.input :name%>               
         </div>
         <div class="col-sm-7">  
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" required="required" class="form-control">
-            </div>   
+            <%= f.input :email %> 
         </div>
     </div>
     <div class="form-group">
-        <label>Message *</label>
-        <textarea rows="8" class="form-control" required="required" id="message" name="message"></textarea>
+        <%= f.input :message%> 
     </div>                        
     <div class="form-group">
-        <button required="required" class="btn btn-primary btn-lg" type="submit">Submit Message</button>
+        <%= f.submit "Enviar mensaje", class: "btn btn-primary btn-lg"%> 
     </div>
-</form>  
+<% end %>
