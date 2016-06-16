@@ -58,52 +58,7 @@
             <i class="fa fa-chevron-right"></i>
         </a>
     </section><!--/#main-slider-->
-    <section id="partner">
-        <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>Eventos y predicaciones</h2>
-                <p class="lead">Te invitamos a que atiendas a nuestras reuniones para juntos conocer más a nuestro Señor Jesucristo. Además de que escuches o veas cualquier enseñanza y mensaje que se encuentra en este medio.</p>
-            </div>          
-        </div><!--/.container-->
-    </section><!--/#partner--> 
-<% unless @capsule.nil? %>
-    <div class="purchase">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 animated fadeInRight">
-                    <div class="row clearfix">
-                        <div class="col-md-12">
-                            <br>
-                            <div class="team">
-                        <div data-wow-delay="300ms" data-wow-duration="1000ms" class="single-profile-top wow fadeInDown animated" style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInDown;">
-                            <div class="media">
-                                <iframe width="100%" height="210" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/57781218&amp;buying=false&liking=false&download=false&sharing=false&show_comments=false& show_playcount=false&show_user=true"></iframe>
-                            </div><!--/.media -->
-                            
-                        </div>
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 animated fadeInLeft">
-                    <div class="wow fadeInDown">
-                        <div class="get-started center wow fadeInDown animated" style="margin-top: 30px; padding: 0px 10px 30px 10px">
-                            <h2><%= @capsule.title %></h2>
-                            <p class="lead"><small><%=@capsule.content%></small></p>
-                            <%= link_to "Fuente de referencia", @capsule.link_ref, target: "blank" %>
-                            <div class="request">
-                                <h4><a href="#">Capsula del dia de hoy</a></h4>
-                            </div>
-                        </div>
-                    </div> 
-                </div>   
-            </div>
-        </div>
-    </div>
-    <% end %>
-
-
- <section id="feature" >
+    <section id="feature" >
     <div class="container"> 
         <div class="row"> 
             <div class="col-md-9 col-sm-12 wow fadeInDown text-center" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -150,6 +105,52 @@
         </div><!--/.row-->    
     </div><!--/.container-->
 </section><!--/#feature-->
+    <section id="partner" class="fadeInRight">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Eventos y predicaciones</h2>
+                <p class="lead">Te invitamos a que atiendas a nuestras reuniones para juntos conocer más a nuestro Señor Jesucristo. Además de que escuches o veas cualquier enseñanza y mensaje que se encuentra en este medio.</p>
+            </div>          
+        </div><!--/.container-->
+    </section><!--/#partner--> 
+<% unless @capsule.nil? %>
+    <div class="purchase">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 animated fadeInRight">
+                    <div class="row clearfix">
+                        <div class="col-md-12">
+                            <br>
+                            <div class="team">
+                        <div data-wow-delay="300ms" data-wow-duration="1000ms" class="single-profile-top wow fadeInDown animated" style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInDown;">
+                            <div class="media">
+                                <iframe width="100%" height="210" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/57781218&amp;buying=false&liking=false&download=false&sharing=false&show_comments=false& show_playcount=false&show_user=true"></iframe>
+                            </div><!--/.media -->
+                            
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 animated fadeInLeft">
+                    <div class="wow fadeInDown">
+                        <div class="get-started center wow fadeInDown animated" style="margin-top: 30px; padding: 0px 10px 30px 10px">
+                            <h2><%= @capsule.title %></h2>
+                            <p class="lead"><small><%=@capsule.content%></small></p>
+                            <%= link_to "Fuente de referencia", @capsule.link_ref, target: "blank" %>
+                            <div class="request">
+                                <h4><a href="#">Capsula del dia de hoy</a></h4>
+                            </div>
+                        </div>
+                    </div> 
+                </div>   
+            </div>
+        </div>
+    </div>
+    <% end %>
+
+
+ 
  
 <section id="recent-works">
         <div class="container">
